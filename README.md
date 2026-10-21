@@ -1,14 +1,16 @@
-# HPC Assignment 3: first implementation phase
+# HPC Assignment 3: sequential and parallel Dijkstra
 
-Native Windows / VS Code PowerShell setup, an MPI smoke test, and sequential
-adjacency-matrix Dijkstra from **source vertex 0**. The parallel Dijkstra,
-performance experiments, plots, and PDF report belong to the next phase.
+Phases 1 and 2 provide native Windows / VS Code PowerShell setup, an MPI smoke
+test, and sequential and parallel adjacency-matrix Dijkstra from **source vertex
+0**, with correctness verification. Performance experiments, plots, and the PDF
+report belong to a later phase.
 
-The assignment requires an adjacency matrix, uppercase `comm.Scatter()` for graph
-distribution, and lowercase `comm.gather()` for results in the eventual parallel
-implementation. The smoke test follows Lecture 7's `MPI_COMM_WORLD`, rank/size,
-root-0, scatter/local-sum/gather examples (pages 4, 28–31, and 41). It checks the
-collectives using small integer buffers; it does not yet distribute a graph.
+The parallel implementation follows the assignment's adjacency-matrix requirement,
+uppercase `comm.Scatter()` for graph distribution, and lowercase `comm.gather()`
+for results. Both MPI programs follow Lecture 7's `MPI_COMM_WORLD`, rank/size,
+root-0, scatter/local-sum/gather conventions (pages 4, 28–31, and 41), using
+`MPI.COMM_WORLD` in mpi4py. The smoke test checks small integer buffers; parallel
+Dijkstra distributes actual adjacency-matrix weights.
 
 ## Tested environment
 
@@ -142,6 +144,71 @@ probability of each possible edge, and present weights are uniform integers from
 options apply when `--graph` is omitted. Defaults are 5 vertices, density 0.5,
 maximum weight 10, and seed 0. `generated/` is ignored by Git.
 
+## Parallel Dijkstra
+
+`dijkstra_parallel.dijkstra(matrix, comm=MPI.COMM_WORLD)` is a collective call:
+rank 0 supplies the complete graph, and all other ranks supply `None`. It returns
+the distance array on root 0 and `None` on workers. Root alone loads or generates
+the graph when using the command-line interface. The shared graph helpers and
+sequential reference are reused unchanged.
+
+For `V` vertices and `P` processes, let `block = ceil(V / P)`. Rank `r` owns
+vertices from `r * block` through `min((r + 1) * block, V) - 1`. Root packs the
+graph's destination-column blocks into one C-contiguous `float64` NumPy buffer of
+shape `(P, V, block)`. Uppercase `comm.Scatter()` sends an equal-sized `(V, block)`
+buffer to every rank, with `local_weights[u, j] = graph[u, r * block + j]` for
+real vertices. Thus each rank receives all incoming edges for its owned vertices,
+including the original directed edge orientation. Extra columns contain `inf`
+and are excluded from minimum selection and relaxation. This handles uneven
+partitions and ranks with no vertices when `P > V`, while retaining `Scatter()`.
+
+Each rank maintains distances and visited flags only for its own block. Every
+iteration it finds its closest unvisited vertex and uses
+`comm.allreduce((distance, global_vertex_id), op=MPI.MINLOC)` to select the global
+choice. Equal distances choose the lowest vertex ID, matching the sequential
+reference. Every rank relaxes its own destinations using the selected source row
+of its local matrix; those neighbor weights are contiguous in memory. All ranks
+stop together if the global minimum is infinite, leaving unreachable distances
+as `inf`. Overflow checks are deferred so a later finite alternative can replace
+an overflowing route, then combined collectively before raising `OverflowError`.
+
+Lowercase `comm.gather()` collects the padded local distance arrays in rank order.
+Root concatenates them and truncates to `V` entries, restoring vertex order and
+removing padding. Root validates the graph and broadcasts any error before graph
+distribution. Root also broadcasts command-line parsing, loading, generation, and
+saving outcomes, including `--help`, so invalid input does not leave workers
+waiting. Unexpected command-line failures call `MPI.COMM_WORLD.Abort()`.
+
+Run the same five-vertex example with one, two, and four processes:
+
+```powershell
+.\.venv\Library\bin\mpiexec.exe -n 1 .\.venv\Scripts\python.exe .\dijkstra_parallel.py --graph .\examples\zero_weight_disconnected.txt --verify
+.\.venv\Library\bin\mpiexec.exe -n 2 .\.venv\Scripts\python.exe .\dijkstra_parallel.py --graph .\examples\zero_weight_disconnected.txt --verify
+.\.venv\Library\bin\mpiexec.exe -n 4 .\.venv\Scripts\python.exe .\dijkstra_parallel.py --graph .\examples\zero_weight_disconnected.txt --verify
+```
+
+The observed distances were `[0, 0, 2, 3, inf]` at every process count, with
+`Verification: PASS`; two and four processes use uneven partitions. Generate a
+directed graph with zero-weight edges and more processes
+than vertices with:
+
+```powershell
+.\.venv\Library\bin\mpiexec.exe -n 4 .\.venv\Scripts\python.exe .\dijkstra_parallel.py --vertices 3 --density 1 --max-weight 0 --seed 42 --directed --verify
+```
+
+The observed distances were `[0, 0, 0]`, with `Verification: PASS`. The parallel
+CLI accepts the same graph generation, loading, and `--save-graph` options as
+the sequential CLI. `--verify`
+compares every returned distance, including infinities, exactly with sequential
+Dijkstra on the identical root graph, and prints `Verification: PASS` on success.
+The option is off by default, and verification runs after the parallel solve.
+
+The `_solve_local()` computation uses scalar minimum scans and relaxations like
+the sequential baseline, with work distributed among ranks. Input validation,
+packing, scattering, final gathering, and reference verification are outside that
+kernel, so a later benchmarking phase can define comparable timing boundaries.
+This phase makes no performance or speedup claims.
+
 ## Correctness checks
 
 ```powershell
@@ -149,8 +216,11 @@ maximum weight 10, and seed 0. `generated/` is ignored by Git.
 git diff --check
 ```
 
-The final suite passed **33 tests** in 0.131 seconds. Fixed matrices have literal,
-independently calculated expected distances, including:
+The Phase 2 regression run passed all **33 existing sequential/helper tests**.
+Default discovery reported `Ran 39 tests in 0.087s: OK (skipped=6)`: the six
+opt-in MPI CLI methods are skipped unless `RUN_MPI_TESTS=1` and were run
+separately below. Fixed matrices have literal, independently calculated expected
+distances, including:
 
 | Case | Expected distances from 0 |
 | --- | --- |
@@ -166,6 +236,52 @@ negative weights in unreachable components, invalid matrices, reproducible graph
 generation, zero/complete density, `.npy`/`.txt` round trips, singleton text
 loading, and float64 path overflow. `pip check` reported no broken requirements.
 
+Run the collective parallel API correctness suite at each process count:
+
+```powershell
+.\.venv\Library\bin\mpiexec.exe -n 1 .\.venv\Scripts\python.exe -m tests.mpi_dijkstra_cases
+.\.venv\Library\bin\mpiexec.exe -n 2 .\.venv\Scripts\python.exe -m tests.mpi_dijkstra_cases
+.\.venv\Library\bin\mpiexec.exe -n 4 .\.venv\Scripts\python.exe -m tests.mpi_dijkstra_cases
+```
+
+Observed Phase 2 results, with matching completion counts on every rank:
+
+| Processes | Known graphs | Seeded random graphs | Recovery solves | Invalid inputs rejected | Overflow rejected | Result |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | 15 | 144 | 10 | 9 | 1 | PASS |
+| 2 | 15 | 144 | 10 | 9 | 1 | PASS |
+| 4 | 15 | 144 | 10 | 9 | 1 | PASS |
+
+Every run compared all distances from **169 successful solves** against the
+sequential reference: **507 successful solves** across the three process counts,
+plus **30 expected input/overflow rejections**. Known graphs also use independent
+literal expected distances. The cases cover directed and undirected graphs,
+disconnected components, zero-weight edges and cycles, equal-cost paths, fractional
+weights, noncontiguous input, input preservation, uneven partitions, and more ranks
+than vertices. Random cases combine sizes `1, 2, 3, 5, 7, 8, 11, 17`, seeds
+`0, 7, 42`, both orientations, and densities `0, 0.25, 1`; seed 0 uses exclusively
+zero weights. Every rejected graph is followed by a successful solve on the same
+communicator to verify recovery.
+
+Run the opt-in MPI command-line integration tests from a normal PowerShell
+session, rather than from inside `mpiexec`:
+
+```powershell
+$env:RUN_MPI_TESTS = '1'
+.\.venv\Scripts\python.exe -m unittest tests.test_parallel_cli -v
+Remove-Item Env:RUN_MPI_TESTS
+```
+
+If reusing another MPI runtime, set `$env:MPIEXEC` to its matching launcher path
+before running these tests. The six methods make **30 MPI launches** across one,
+two, and four processes, checking example loading, generation with padding,
+malformed/missing graph files, invalid generation and arguments, help, and
+overflow. All **six methods and 30 launches passed** (`Ran 6 tests in 8.107s: OK`).
+The 21 invalid-input/overflow launches returned exit code 2 with one root error
+and no traceback; the six successful solves and three help launches returned
+exit code 0. Each launch has a timeout that terminates its worker processes if
+it hangs; no launch timed out.
+
 During automated setup, the Windows sandbox blocked environment bootstrap,
 package downloads, MPI worker creation, and default temporary-file access. The
 affected commands succeeded when rerun with the tool's required access. The
@@ -179,9 +295,12 @@ VS Code PowerShell terminal.
 | --- | --- |
 | `mpi_smoke.py` | Validated root-0 Scatter/gather smoke test |
 | `dijkstra_sequential.py` | Sequential algorithm and command-line interface |
+| `dijkstra_parallel.py` | Distributed column-block algorithm and root-0 MPI CLI |
 | `graph_utils.py` | Shared adjacency-matrix helpers |
 | `examples/zero_weight_disconnected.txt` | Small loadable example |
 | `tests/test_dijkstra_sequential.py` | Known-distance and algorithm checks |
 | `tests/test_graph_utils.py` | Validation, generation, and file checks |
+| `tests/mpi_dijkstra_cases.py` | Collective known/random comparisons, rejection, and recovery checks |
+| `tests/test_parallel_cli.py` | Opt-in MPI subprocess success/error checks with timeouts |
 | `requirements.txt` | Tested NumPy and mpi4py versions |
 | `.gitignore` | Excludes `.venv/`, caches, generated data, and crash dumps |
