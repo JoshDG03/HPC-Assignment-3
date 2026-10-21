@@ -1,0 +1,3 @@
+# Requires a compatible MPI runtime; see README.md for native Windows setup.
+numpy==2.5.4
+mpi4py==4.1.2
