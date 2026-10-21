@@ -1,0 +1,8 @@
+pilot parallel p=16 n100_d0p1_seed42: 1 verified repetitions, 0.008485..0.008485 s; root RSS=52.3 MiB
+pilot parallel p=16 n500_d0p1_seed42: 1 verified repetitions, 0.057508..0.057508 s; root RSS=57.6 MiB
+pilot parallel p=16 n1000_d0p1_seed42: 1 verified repetitions, 0.169764..0.169764 s; root RSS=66.6 MiB
+pilot parallel p=16 n2000_d0p1_seed42: 1 verified repetitions, 0.543369..0.543369 s; root RSS=90.1 MiB
+pilot parallel p=16 n100_d0p5_seed42: 1 verified repetitions, 0.007038..0.007038 s; root RSS=60.0 MiB
+pilot parallel p=16 n500_d0p5_seed42: 1 verified repetitions, 0.061633..0.061633 s; root RSS=63.6 MiB
+pilot parallel p=16 n1000_d0p5_seed42: 1 verified repetitions, 0.185690..0.185690 s; root RSS=69.6 MiB
+pilot parallel p=16 n2000_d0p5_seed42: 1 verified repetitions, 0.649492..0.649492 s; root RSS=93.2 MiB

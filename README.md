@@ -2,8 +2,9 @@
 
 Phases 1 and 2 provide native Windows / VS Code PowerShell setup, an MPI smoke
 test, and sequential and parallel adjacency-matrix Dijkstra from **source vertex
-0**, with correctness verification. Performance experiments, plots, and the PDF
-report belong to a later phase.
+0**, with correctness verification. Phase 3 adds reproducible Windows benchmarks,
+raw measurements, summary statistics, and execution-time/speedup plots. The PDF
+report will follow separately.
 
 The parallel implementation follows the assignment's adjacency-matrix requirement,
 uppercase `comm.Scatter()` for graph distribution, and lowercase `comm.gather()`
@@ -23,6 +24,8 @@ Verified on October 20, 2026, using native Windows AMD64 and PowerShell:
 | NumPy | 2.5.4 |
 | mpi4py | 4.1.2 |
 | Intel MPI runtime (`impi-rt`) | 2021.18.1 |
+| Matplotlib (benchmark plots) | 3.11.2 |
+| psutil (benchmark hardware/memory/affinity capture) | 7.2.2 |
 
 No existing MPI launcher/runtime was found on PATH, in the usual Microsoft/Intel
 installation locations, or in the installed-program registry entries. Intel MPI
@@ -204,10 +207,11 @@ Dijkstra on the identical root graph, and prints `Verification: PASS` on success
 The option is off by default, and verification runs after the parallel solve.
 
 The `_solve_local()` computation uses scalar minimum scans and relaxations like
-the sequential baseline, with work distributed among ranks. Input validation,
-packing, scattering, final gathering, and reference verification are outside that
-kernel, so a later benchmarking phase can define comparable timing boundaries.
-This phase makes no performance or speedup claims.
+the sequential baseline, with work distributed among ranks. The Phase 3 benchmark
+times the complete public `dijkstra()` function, including validation, packing,
+scattering, distributed computation, final gathering, and result reconstruction.
+Reference verification runs after timing. Neither algorithm was changed for the
+benchmark.
 
 ## Correctness checks
 
@@ -289,6 +293,191 @@ initial temporary-file test errors were permission failures; the full suite
 passed after that access was available. These commands run directly in a normal
 VS Code PowerShell terminal.
 
+## Windows benchmarking and plots
+
+`benchmark_windows.py` runs correctness preflights, prepares and hashes saved
+graphs, performs a separate pilot, and launches one benchmark worker at a time.
+`benchmark_worker.py` times the public functions. `benchmark_plots.py` validates
+the measured CSV before producing summary statistics and plots. Install the
+benchmark dependencies using the same project interpreter:
+
+```powershell
+.\.venv\Scripts\python.exe -m pip install -r .\requirements-benchmark.txt
+.\.venv\Scripts\python.exe -m pip check
+```
+
+The run directory is `results/windows_2026-10-20_run01`. The pilot command requires
+a fresh directory and refuses to overwrite a previous run. Use a new suffix when
+repeating the experiment. Execute these commands sequentially from the repository
+root in native Windows PowerShell:
+
+```powershell
+.\.venv\Scripts\python.exe .\benchmark_windows.py pilot --output .\results\windows_2026-10-20_run01 --sizes 100 500 1000 2000 --densities 0.1 0.5 --seed 42 --max-weight 1000 --processes 1 2 4 8 16
+.\.venv\Scripts\python.exe .\benchmark_windows.py run --output .\results\windows_2026-10-20_run01 --sizes 100 500 1000 2000 --repetitions 5 --decision 'Pilot supports all four sizes and 16 processes within available RAM and runtime.'
+```
+
+The pilot first ran `tests.mpi_dijkstra_cases` at **1, 2, 4, 8, and 16 processes**;
+all five preflights passed before timing began. Each process count completed 169
+successful graph solves and 10 synchronized input/overflow rejections, with
+recovery checks. Across the five launches, that is 845 verified solves and 50
+expected rejections. Exact MPI launch commands and output are saved in
+`metadata.json` and `logs/correctness_p*.txt`.
+
+Every graph is undirected, uses seed **42**, and samples integer weights uniformly
+from **0 through 1000**, inclusive. Density is the edge-presence probability,
+with values **0.1 and 0.5**; realized density is also recorded. The pilot used
+**100, 500, 1000, and 2000 vertices**, a separate sequential run, and MPI counts
+**1, 4, and 16**, with one warm-up and one measured repetition per configuration.
+Its **64 CSV rows** comprise 32 warm-ups and 32 pilot measurements and remain in
+`pilot/raw.csv`, separate from main results. Every pilot result matched the saved
+reference. The largest complete public-call time was **2.356275 seconds**; the
+largest sampled root RSS was **93.2 MiB**, and the largest summed rank RSS was
+**857.2 MiB**. About **4.68 GiB** of RAM remained available after the pilot. The
+2000-by-2000 float64 input alone occupies **30.52 MiB**. These pilot observations
+support retaining all four sizes and testing 16 processes.
+
+The completed main matrix contains **8 graphs** (four sizes times two densities),
+each with a separate sequential baseline and MPI counts **1, 2, 4, 8, and 16**.
+Every configuration completed one discarded warm-up and five measured
+repetitions: **48 configurations, 240 measured samples, and 48 warm-up samples**.
+All 288 main calls matched the reference, and every graph hash stayed unchanged.
+The pilot remains separate. Summary statistics cover all 48 configurations;
+four charts are saved in both PNG and SVG formats.
+
+At 2000 vertices, complete public-function timings were:
+
+| Density | Sequential mean ± sample SD (s) | MPI 16 mean ± sample SD (s) | Speedup |
+| --- | --- | --- | --- |
+| 0.1 | 1.806245 ± 0.019717 | 0.513928 ± 0.018611 | 3.5146× |
+| 0.5 | 2.328957 ± 0.030030 | 0.639311 ± 0.010175 | 3.6429× |
+
+The highest measured speedup was **3.6429×** at 2000 vertices, density 0.5,
+and 16 processes. **Nine of 40 MPI configurations were slower** than their
+matching sequential mean. The lowest speedup was **0.5355×** at 100 vertices,
+density 0.1, and 16 processes (about 1.87 times the sequential runtime). The
+one-process MPI results are included even when they are slower. The small
+one-process difference at 2000 vertices/density 0.5 lies within the observed
+sample variation and should not be interpreted as evidence of a general gain.
+All timings, standard deviations, and process counts are in
+[summary.csv](results/windows_2026-10-20_run01/summary.csv); the complete
+largest-graph table is in [findings.md](results/windows_2026-10-20_run01/findings.md).
+
+During the main run, maximum sampled root RSS was **105.0 MiB** and maximum
+summed rank RSS was **961.1 MiB**. The largest sum of rank lifetime peaks was
+**1098.7 MiB**, which is not a simultaneous working-set measurement.
+
+The original sequential and parallel algorithm files and graph helpers have
+unchanged SHA-256 hashes. Regression and summary checks reported
+`Ran 51 tests in 0.139s: OK (skipped=6)`: all 33 existing tests and 12 new summary
+tests passed, with the six previously validated opt-in CLI methods skipped.
+
+### Timing and correctness contract
+
+The sequential baseline runs as a separate, plain single-process Python child,
+outside `mpiexec`. It times the entire
+`dijkstra_sequential.dijkstra(graph)` call, including its input validation and
+validated matrix copy. MPI runs time the entire
+`dijkstra_parallel.dijkstra(graph, comm)` call, including validation, packing,
+uppercase `Scatter()`, all distributed minimum scans/relaxations and collective
+reductions, lowercase `gather()`, padding removal, and result reconstruction.
+
+Every parallel warm-up and repetition starts with `comm.Barrier()` before timing.
+Each rank records `start = MPI.Wtime()`, calls the public function, and stops its
+local timer immediately when the call returns. An `MPI.MAX` reduction collects
+the maximum rank-local elapsed time **after** the timers have stopped. Per-rank
+times are also saved. The sequential child uses `MPI.Wtime()` around its public
+call. MPI startup, imports, graph generation/loading, graph/reference hashing,
+reference preparation/verification, the pre-call barrier, timing reductions,
+memory sampling, printing, and file writes are excluded from both timing scopes.
+
+Root loads the same saved `.npy` matrix for each implementation/process count.
+Before timing, the worker verifies the file SHA-256, the graph-value SHA-256, and
+the reference-distance SHA-256. Canonical value hashes use C-order,
+little-endian float64 bytes. After **every warm-up and measured call**, it checks
+every returned distance exactly against the saved sequential reference and
+checks that the input graph hash is unchanged. Other ranks verify that their
+public parallel call returned `None`. Verification communication is outside
+timing, and all ranks learn the verification outcome before another solve.
+
+Raw CSV rows retain pilot/main phase, warm-up/measured sample kind, repetition,
+graph parameters/hash, implementation, process count, maximum elapsed seconds,
+rank-local times, verification status, and memory snapshots. Summary statistics
+use **only verified main-phase measured rows**. For each graph/configuration,
+`mean_seconds` is the arithmetic mean and `std_seconds` is the sample standard
+deviation (`ddof=1`). Speedup is
+`matching sequential mean / parallel mean`; graph IDs, parameters, and hashes
+must agree. MPI with one process is included. Values below 1 show measured
+slowdowns. Execution-time plots display mean plus/minus sample SD; speedup plots
+include a 1-times baseline. Densities are plotted separately.
+
+### Recorded machine and reproducibility limits
+
+The machine is an **Intel Core i7-14650HX**, with **16 physical cores and 24 logical
+processors**, approximately **15.61 GiB RAM**, and **Windows 11 Home build 26200**.
+It was connected to AC power with the Windows **Turbo** power scheme. Python,
+NumPy, mpi4py, Intel MPI, Matplotlib, and psutil versions are listed above and
+captured with the installed package inventory. Intel MPI reports vendor/version
+`('Intel MPI', (2021, 18, 1))`; worker metadata also records its full library
+version and timer resolution.
+
+The controller sets `I_MPI_PIN=0`, disables Intel rank pinning, and records the
+inherited process affinity. The observed allowed CPU set is logical IDs **0-23**;
+Windows schedules workers across that set. It sets `OMP_NUM_THREADS`,
+`MKL_NUM_THREADS`, `OPENBLAS_NUM_THREADS`, `NUMEXPR_NUM_THREADS`,
+`VECLIB_MAXIMUM_THREADS`, and `BLIS_NUM_THREADS` to **1**. Relevant inherited and
+effective MPI/thread/affinity variables and each rank's actual affinity are
+recorded. Runs use fixed implementation/process blocks with ascending graph
+sizes; the five-repetition SD describes variation within that block. It does not
+estimate variability across independent sessions, power states, or scheduling
+policies. The benchmark makes no pinning or CPU core-type placement guarantee.
+
+Memory is sampled outside timing using psutil. RSS is the current process working
+set; Windows `peak_wset` is the lifetime peak including interpreter/MPI setup.
+The sum of rank lifetime peaks is **not** a simultaneous aggregate peak.
+
+The source baseline is commit
+`487ba609ed0d06783837969ac1a52e53866a7ab6`. The benchmark scripts are additions
+to that baseline, so the commit alone does not describe every measured source:
+`metadata.json` records individual Python SHA-256 hashes and the initial Git
+status, while `sources/` preserves the exact Python files. The controller checks
+that those hashes remain unchanged between pilot and main phases and again
+after measurement. It also saves launcher/graph/reference hashes, graph
+parameters, commands, worker logs, hardware/power snapshots, and artifact hashes.
+Saved graph and reference `.npy` files remain available locally. The large graph
+matrices are ignored by Git; the small reference arrays are retained with the
+results. A fresh pilot command
+regenerates them from the recorded parameters; compare its canonical hashes
+with the saved manifest to confirm identical inputs.
+
+### Saved artifacts and plot regeneration
+
+All paths below are inside
+[`results/windows_2026-10-20_run01`](results/windows_2026-10-20_run01):
+
+| Artifact | Contents |
+| --- | --- |
+| [metadata.json](results/windows_2026-10-20_run01/metadata.json) | Machine, packages, source/artifact hashes, commands, affinity policy, and completion status |
+| [manifest.json](results/windows_2026-10-20_run01/manifest.json) / [main_manifest.json](results/windows_2026-10-20_run01/main_manifest.json) | Saved graph identities, parameters, paths, and hashes |
+| [pilot/raw.csv](results/windows_2026-10-20_run01/pilot/raw.csv) / [pilot/resource_check.json](results/windows_2026-10-20_run01/pilot/resource_check.json) | Separate pilot samples and runtime/RAM observations |
+| [raw.csv](results/windows_2026-10-20_run01/raw.csv) / `raw_parts/` | Every main measurement and explicitly labeled discarded warm-up |
+| [summary.csv](results/windows_2026-10-20_run01/summary.csv) | Measured means, sample SDs, min/max, and matching-graph speedups |
+| [findings.md](results/windows_2026-10-20_run01/findings.md) | Actual completed matrix and measured speedup/slowdown findings |
+| `sequential_p1.json`, `parallel_p*.json` | Rank metadata, warm-up/measured records, verification, and memory |
+| `logs/`, `sources/` | Exact child output and frozen Python source snapshots |
+| `graphs/`, `references/` | Locally saved input matrices and sequential reference arrays |
+| [Density 0.1 time PNG](results/windows_2026-10-20_run01/plots/density_0p1_execution_time.png) / [SVG](results/windows_2026-10-20_run01/plots/density_0p1_execution_time.svg) | Complete-function elapsed times, including one-process MPI |
+| [Density 0.1 speedup PNG](results/windows_2026-10-20_run01/plots/density_0p1_speedup.png) / [SVG](results/windows_2026-10-20_run01/plots/density_0p1_speedup.svg) | Sequential mean divided by MPI mean |
+| [Density 0.5 time PNG](results/windows_2026-10-20_run01/plots/density_0p5_execution_time.png) / [SVG](results/windows_2026-10-20_run01/plots/density_0p5_execution_time.svg) | Complete-function elapsed times, separated by density |
+| [Density 0.5 speedup PNG](results/windows_2026-10-20_run01/plots/density_0p5_speedup.png) / [SVG](results/windows_2026-10-20_run01/plots/density_0p5_speedup.svg) | Measured gains and slowdowns with a 1-times baseline |
+
+The main controller generates the summary, findings, and eight plot files after
+all workers complete. Regenerate those derived artifacts from the measured CSV
+without rerunning either algorithm:
+
+```powershell
+.\.venv\Scripts\python.exe .\benchmark_plots.py --raw .\results\windows_2026-10-20_run01\raw.csv --summary .\results\windows_2026-10-20_run01\summary.csv --plots-dir .\results\windows_2026-10-20_run01\plots --findings .\results\windows_2026-10-20_run01\findings.md
+```
+
 ## Files
 
 | File | Purpose |
@@ -302,5 +491,10 @@ VS Code PowerShell terminal.
 | `tests/test_graph_utils.py` | Validation, generation, and file checks |
 | `tests/mpi_dijkstra_cases.py` | Collective known/random comparisons, rejection, and recovery checks |
 | `tests/test_parallel_cli.py` | Opt-in MPI subprocess success/error checks with timeouts |
+| `benchmark_windows.py` | Windows pilot/main controller, graph preparation, source snapshots, and metadata |
+| `benchmark_worker.py` | Complete-function sequential/MPI timing and per-sample verification |
+| `benchmark_plots.py` | Raw CSV validation, summary statistics, findings, and density-specific PNG/SVG plots |
+| `tests/test_benchmark_plots.py` | Independently known statistics and rejection of invalid/mixed measurements |
 | `requirements.txt` | Tested NumPy and mpi4py versions |
+| `requirements-benchmark.txt` | Algorithm requirements plus tested Matplotlib and psutil versions |
 | `.gitignore` | Excludes `.venv/`, caches, generated data, and crash dumps |

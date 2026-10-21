@@ -1,0 +1,1759 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-10-21T01:38:58.167428+00:00",
+  "completed_utc": "2026-10-21T01:39:02.679077+00:00",
+  "status": "complete",
+  "command_argv": [
+    "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Scripts\\python.exe",
+    "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\benchmark_worker.py",
+    "--manifest",
+    "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\manifest.json",
+    "--output",
+    "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\pilot\\raw_parts\\parallel_p4.csv",
+    "--mode",
+    "parallel",
+    "--phase",
+    "pilot",
+    "--repetitions",
+    "1",
+    "--warmups",
+    "1",
+    "--run-metadata",
+    "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\pilot\\parallel_p4.json"
+  ],
+  "working_directory": "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3",
+  "manifest_path": "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\manifest.json",
+  "manifest_file_sha256": "fd16b44e638b76fd6f2eae475dae95123f370f2790dc9a7074c7c3e7cee505ea",
+  "raw_csv_path": "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\pilot\\raw_parts\\parallel_p4.csv",
+  "mode": "parallel",
+  "phase": "pilot",
+  "processes": 4,
+  "warmups_per_graph": 1,
+  "measured_repetitions_per_graph": 1,
+  "timing_method": "MPI.Wtime immediately around the complete public dijkstra() call; parallel Barrier before each call; maximum local elapsed time reduced after stopping the timers.",
+  "excluded_from_timing": [
+    "MPI startup",
+    "imports",
+    "graph generation/loading",
+    "hash checks",
+    "reference verification",
+    "pre-call Barrier",
+    "elapsed-time reduction",
+    "memory sampling",
+    "printing",
+    "CSV/metadata writes"
+  ],
+  "memory_method": "RSS sampled outside timing after each solve; peak RSS is Windows process-lifetime peak working set, including interpreter/MPI setup. Summed per-rank peaks are not a simultaneous aggregate peak.",
+  "initial_ranks": [
+    {
+      "rank": 0,
+      "pid": 30540,
+      "processor_name": "SHENRON",
+      "affinity_logical_cpu_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "environment": {
+        "FI_PROVIDER_PATH": "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Library\\bin",
+        "HYDRA_BSTRAP_DEBUG": "0",
+        "HYDRA_BSTRAP_DOWNSTREAM_STDIN": "-1",
+        "HYDRA_BSTRAP_LAUNCHER": "powershell",
+        "HYDRA_BSTRAP_LOCALHOST": "SHENRON",
+        "HYDRA_BSTRAP_NODE_ID": "0",
+        "HYDRA_BSTRAP_NUM_DOWNSTREAM_PROXIES": "0",
+        "HYDRA_BSTRAP_NUM_LAUNCHES": "-1",
+        "HYDRA_BSTRAP_PGID": "0",
+        "HYDRA_BSTRAP_PROXY_ID": "0",
+        "HYDRA_BSTRAP_SUBTREE_SIZE": "1",
+        "HYDRA_BSTRAP_TREE_WIDTH": "1",
+        "HYDRA_BSTRAP_UPSTREAM_FD": "344",
+        "HYDRA_IP_VERSION": "2",
+        "HYDRA_LAUNCH_TYPE": "2",
+        "I_MPI_HYDRA_TOPOLIB": "ipl2",
+        "I_MPI_HYDRA_UUID": "388e0000-ffd1-1930-0000-00009d410000",
+        "I_MPI_INFO_BRAND": "Intel(R) Core(TM) i7-14650HX",
+        "I_MPI_INFO_CACHE1": "0,0,4,4,8,8,12,12,16,16,20,20,24,24,28,28,32,33,34,35,36,37,38,39",
+        "I_MPI_INFO_CACHE2": "0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,8,8,9,9,9,9",
+        "I_MPI_INFO_CACHE3": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+        "I_MPI_INFO_CACHES": "3",
+        "I_MPI_INFO_CACHE_SHARE": "2,8,128",
+        "I_MPI_INFO_CACHE_SIZE": "49152,2097152,31457280",
+        "I_MPI_INFO_CORE": "0,0,4,4,8,8,12,12,16,16,20,20,24,24,28,28,32,33,34,35,36,37,38,39",
+        "I_MPI_INFO_C_NAME": "Unknown",
+        "I_MPI_INFO_DESC": "654311424",
+        "I_MPI_INFO_FLGB": "597436329",
+        "I_MPI_INFO_FLGC": "-330869",
+        "I_MPI_INFO_FLGCEXT": "406849444",
+        "I_MPI_INFO_FLGD": "-1077150721",
+        "I_MPI_INFO_FLGDEXT": "-1139227632",
+        "I_MPI_INFO_LCPU": "24",
+        "I_MPI_INFO_MODE": "775",
+        "I_MPI_INFO_NC": "16",
+        "I_MPI_INFO_NP": "1",
+        "I_MPI_INFO_PACK": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+        "I_MPI_INFO_SERIAL": "0000",
+        "I_MPI_INFO_SIGN": "722545",
+        "I_MPI_INFO_STATE": "0",
+        "I_MPI_INFO_THREAD": "0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,0,0,0,0,0,0,0",
+        "I_MPI_INFO_VEND": "1",
+        "I_MPI_PIN": "0",
+        "I_MPI_PIN_INFO": "0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23",
+        "I_MPI_PIN_MAPPING": "4:0 0,1 0,2 0,3 0",
+        "MKL_NUM_THREADS": "1",
+        "MPI_LOCALNRANKS": "4",
+        "MPI_LOCALRANKID": "0",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "PMI_FD": "292",
+        "PMI_RANK": "0",
+        "PMI_SIZE": "4"
+      },
+      "python_executable": "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Scripts\\python.exe",
+      "python_version": "3.14.3",
+      "python_architecture_bits": 64,
+      "numpy_version": "2.5.4",
+      "mpi4py_version": "4.1.2",
+      "psutil_version": "7.2.2",
+      "mpi_vendor": [
+        "Intel MPI",
+        [
+          2021,
+          18,
+          1
+        ]
+      ],
+      "mpi_library_version": "Intel(R) MPI Library 2021.18.1 for Windows* OS",
+      "mpi_wtick_seconds": -1.0,
+      "memory": {
+        "rss_bytes": 44785664,
+        "peak_rss_bytes": 44785664
+      }
+    },
+    {
+      "rank": 1,
+      "pid": 32992,
+      "processor_name": "SHENRON",
+      "affinity_logical_cpu_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "environment": {
+        "FI_PROVIDER_PATH": "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Library\\bin",
+        "HYDRA_BSTRAP_DEBUG": "0",
+        "HYDRA_BSTRAP_DOWNSTREAM_STDIN": "-1",
+        "HYDRA_BSTRAP_LAUNCHER": "powershell",
+        "HYDRA_BSTRAP_LOCALHOST": "SHENRON",
+        "HYDRA_BSTRAP_NODE_ID": "0",
+        "HYDRA_BSTRAP_NUM_DOWNSTREAM_PROXIES": "0",
+        "HYDRA_BSTRAP_NUM_LAUNCHES": "-1",
+        "HYDRA_BSTRAP_PGID": "0",
+        "HYDRA_BSTRAP_PROXY_ID": "0",
+        "HYDRA_BSTRAP_SUBTREE_SIZE": "1",
+        "HYDRA_BSTRAP_TREE_WIDTH": "1",
+        "HYDRA_BSTRAP_UPSTREAM_FD": "344",
+        "HYDRA_IP_VERSION": "2",
+        "HYDRA_LAUNCH_TYPE": "2",
+        "I_MPI_HYDRA_TOPOLIB": "ipl2",
+        "I_MPI_HYDRA_UUID": "388e0000-ffd1-1930-0000-00009d410000",
+        "I_MPI_INFO_BRAND": "Intel(R) Core(TM) i7-14650HX",
+        "I_MPI_INFO_CACHE1": "0,0,4,4,8,8,12,12,16,16,20,20,24,24,28,28,32,33,34,35,36,37,38,39",
+        "I_MPI_INFO_CACHE2": "0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,8,8,9,9,9,9",
+        "I_MPI_INFO_CACHE3": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+        "I_MPI_INFO_CACHES": "3",
+        "I_MPI_INFO_CACHE_SHARE": "2,8,128",
+        "I_MPI_INFO_CACHE_SIZE": "49152,2097152,31457280",
+        "I_MPI_INFO_CORE": "0,0,4,4,8,8,12,12,16,16,20,20,24,24,28,28,32,33,34,35,36,37,38,39",
+        "I_MPI_INFO_C_NAME": "Unknown",
+        "I_MPI_INFO_DESC": "654311424",
+        "I_MPI_INFO_FLGB": "597436329",
+        "I_MPI_INFO_FLGC": "-330869",
+        "I_MPI_INFO_FLGCEXT": "406849444",
+        "I_MPI_INFO_FLGD": "-1077150721",
+        "I_MPI_INFO_FLGDEXT": "-1139227632",
+        "I_MPI_INFO_LCPU": "24",
+        "I_MPI_INFO_MODE": "775",
+        "I_MPI_INFO_NC": "16",
+        "I_MPI_INFO_NP": "1",
+        "I_MPI_INFO_PACK": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+        "I_MPI_INFO_SERIAL": "0000",
+        "I_MPI_INFO_SIGN": "722545",
+        "I_MPI_INFO_STATE": "0",
+        "I_MPI_INFO_THREAD": "0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,0,0,0,0,0,0,0",
+        "I_MPI_INFO_VEND": "1",
+        "I_MPI_PIN": "0",
+        "I_MPI_PIN_INFO": "0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23",
+        "I_MPI_PIN_MAPPING": "4:0 0,1 0,2 0,3 0",
+        "MKL_NUM_THREADS": "1",
+        "MPI_LOCALNRANKS": "4",
+        "MPI_LOCALRANKID": "1",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "PMI_FD": "324",
+        "PMI_RANK": "1",
+        "PMI_SIZE": "4"
+      },
+      "python_executable": "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Scripts\\python.exe",
+      "python_version": "3.14.3",
+      "python_architecture_bits": 64,
+      "numpy_version": "2.5.4",
+      "mpi4py_version": "4.1.2",
+      "psutil_version": "7.2.2",
+      "mpi_vendor": [
+        "Intel MPI",
+        [
+          2021,
+          18,
+          1
+        ]
+      ],
+      "mpi_library_version": "Intel(R) MPI Library 2021.18.1 for Windows* OS",
+      "mpi_wtick_seconds": -1.0,
+      "memory": {
+        "rss_bytes": 42524672,
+        "peak_rss_bytes": 42524672
+      }
+    },
+    {
+      "rank": 2,
+      "pid": 7228,
+      "processor_name": "SHENRON",
+      "affinity_logical_cpu_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "environment": {
+        "FI_PROVIDER_PATH": "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Library\\bin",
+        "HYDRA_BSTRAP_DEBUG": "0",
+        "HYDRA_BSTRAP_DOWNSTREAM_STDIN": "-1",
+        "HYDRA_BSTRAP_LAUNCHER": "powershell",
+        "HYDRA_BSTRAP_LOCALHOST": "SHENRON",
+        "HYDRA_BSTRAP_NODE_ID": "0",
+        "HYDRA_BSTRAP_NUM_DOWNSTREAM_PROXIES": "0",
+        "HYDRA_BSTRAP_NUM_LAUNCHES": "-1",
+        "HYDRA_BSTRAP_PGID": "0",
+        "HYDRA_BSTRAP_PROXY_ID": "0",
+        "HYDRA_BSTRAP_SUBTREE_SIZE": "1",
+        "HYDRA_BSTRAP_TREE_WIDTH": "1",
+        "HYDRA_BSTRAP_UPSTREAM_FD": "344",
+        "HYDRA_IP_VERSION": "2",
+        "HYDRA_LAUNCH_TYPE": "2",
+        "I_MPI_HYDRA_TOPOLIB": "ipl2",
+        "I_MPI_HYDRA_UUID": "388e0000-ffd1-1930-0000-00009d410000",
+        "I_MPI_INFO_BRAND": "Intel(R) Core(TM) i7-14650HX",
+        "I_MPI_INFO_CACHE1": "0,0,4,4,8,8,12,12,16,16,20,20,24,24,28,28,32,33,34,35,36,37,38,39",
+        "I_MPI_INFO_CACHE2": "0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,8,8,9,9,9,9",
+        "I_MPI_INFO_CACHE3": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+        "I_MPI_INFO_CACHES": "3",
+        "I_MPI_INFO_CACHE_SHARE": "2,8,128",
+        "I_MPI_INFO_CACHE_SIZE": "49152,2097152,31457280",
+        "I_MPI_INFO_CORE": "0,0,4,4,8,8,12,12,16,16,20,20,24,24,28,28,32,33,34,35,36,37,38,39",
+        "I_MPI_INFO_C_NAME": "Unknown",
+        "I_MPI_INFO_DESC": "654311424",
+        "I_MPI_INFO_FLGB": "597436329",
+        "I_MPI_INFO_FLGC": "-330869",
+        "I_MPI_INFO_FLGCEXT": "406849444",
+        "I_MPI_INFO_FLGD": "-1077150721",
+        "I_MPI_INFO_FLGDEXT": "-1139227632",
+        "I_MPI_INFO_LCPU": "24",
+        "I_MPI_INFO_MODE": "775",
+        "I_MPI_INFO_NC": "16",
+        "I_MPI_INFO_NP": "1",
+        "I_MPI_INFO_PACK": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+        "I_MPI_INFO_SERIAL": "0000",
+        "I_MPI_INFO_SIGN": "722545",
+        "I_MPI_INFO_STATE": "0",
+        "I_MPI_INFO_THREAD": "0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,0,0,0,0,0,0,0",
+        "I_MPI_INFO_VEND": "1",
+        "I_MPI_PIN": "0",
+        "I_MPI_PIN_INFO": "0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23",
+        "I_MPI_PIN_MAPPING": "4:0 0,1 0,2 0,3 0",
+        "MKL_NUM_THREADS": "1",
+        "MPI_LOCALNRANKS": "4",
+        "MPI_LOCALRANKID": "2",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "PMI_FD": "400",
+        "PMI_RANK": "2",
+        "PMI_SIZE": "4"
+      },
+      "python_executable": "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Scripts\\python.exe",
+      "python_version": "3.14.3",
+      "python_architecture_bits": 64,
+      "numpy_version": "2.5.4",
+      "mpi4py_version": "4.1.2",
+      "psutil_version": "7.2.2",
+      "mpi_vendor": [
+        "Intel MPI",
+        [
+          2021,
+          18,
+          1
+        ]
+      ],
+      "mpi_library_version": "Intel(R) MPI Library 2021.18.1 for Windows* OS",
+      "mpi_wtick_seconds": -1.0,
+      "memory": {
+        "rss_bytes": 42450944,
+        "peak_rss_bytes": 42450944
+      }
+    },
+    {
+      "rank": 3,
+      "pid": 5156,
+      "processor_name": "SHENRON",
+      "affinity_logical_cpu_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "environment": {
+        "FI_PROVIDER_PATH": "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Library\\bin",
+        "HYDRA_BSTRAP_DEBUG": "0",
+        "HYDRA_BSTRAP_DOWNSTREAM_STDIN": "-1",
+        "HYDRA_BSTRAP_LAUNCHER": "powershell",
+        "HYDRA_BSTRAP_LOCALHOST": "SHENRON",
+        "HYDRA_BSTRAP_NODE_ID": "0",
+        "HYDRA_BSTRAP_NUM_DOWNSTREAM_PROXIES": "0",
+        "HYDRA_BSTRAP_NUM_LAUNCHES": "-1",
+        "HYDRA_BSTRAP_PGID": "0",
+        "HYDRA_BSTRAP_PROXY_ID": "0",
+        "HYDRA_BSTRAP_SUBTREE_SIZE": "1",
+        "HYDRA_BSTRAP_TREE_WIDTH": "1",
+        "HYDRA_BSTRAP_UPSTREAM_FD": "344",
+        "HYDRA_IP_VERSION": "2",
+        "HYDRA_LAUNCH_TYPE": "2",
+        "I_MPI_HYDRA_TOPOLIB": "ipl2",
+        "I_MPI_HYDRA_UUID": "388e0000-ffd1-1930-0000-00009d410000",
+        "I_MPI_INFO_BRAND": "Intel(R) Core(TM) i7-14650HX",
+        "I_MPI_INFO_CACHE1": "0,0,4,4,8,8,12,12,16,16,20,20,24,24,28,28,32,33,34,35,36,37,38,39",
+        "I_MPI_INFO_CACHE2": "0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,8,8,9,9,9,9",
+        "I_MPI_INFO_CACHE3": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+        "I_MPI_INFO_CACHES": "3",
+        "I_MPI_INFO_CACHE_SHARE": "2,8,128",
+        "I_MPI_INFO_CACHE_SIZE": "49152,2097152,31457280",
+        "I_MPI_INFO_CORE": "0,0,4,4,8,8,12,12,16,16,20,20,24,24,28,28,32,33,34,35,36,37,38,39",
+        "I_MPI_INFO_C_NAME": "Unknown",
+        "I_MPI_INFO_DESC": "654311424",
+        "I_MPI_INFO_FLGB": "597436329",
+        "I_MPI_INFO_FLGC": "-330869",
+        "I_MPI_INFO_FLGCEXT": "406849444",
+        "I_MPI_INFO_FLGD": "-1077150721",
+        "I_MPI_INFO_FLGDEXT": "-1139227632",
+        "I_MPI_INFO_LCPU": "24",
+        "I_MPI_INFO_MODE": "775",
+        "I_MPI_INFO_NC": "16",
+        "I_MPI_INFO_NP": "1",
+        "I_MPI_INFO_PACK": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+        "I_MPI_INFO_SERIAL": "0000",
+        "I_MPI_INFO_SIGN": "722545",
+        "I_MPI_INFO_STATE": "0",
+        "I_MPI_INFO_THREAD": "0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,0,0,0,0,0,0,0",
+        "I_MPI_INFO_VEND": "1",
+        "I_MPI_PIN": "0",
+        "I_MPI_PIN_INFO": "0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23",
+        "I_MPI_PIN_MAPPING": "4:0 0,1 0,2 0,3 0",
+        "MKL_NUM_THREADS": "1",
+        "MPI_LOCALNRANKS": "4",
+        "MPI_LOCALRANKID": "3",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "PMI_FD": "432",
+        "PMI_RANK": "3",
+        "PMI_SIZE": "4"
+      },
+      "python_executable": "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Scripts\\python.exe",
+      "python_version": "3.14.3",
+      "python_architecture_bits": 64,
+      "numpy_version": "2.5.4",
+      "mpi4py_version": "4.1.2",
+      "psutil_version": "7.2.2",
+      "mpi_vendor": [
+        "Intel MPI",
+        [
+          2021,
+          18,
+          1
+        ]
+      ],
+      "mpi_library_version": "Intel(R) MPI Library 2021.18.1 for Windows* OS",
+      "mpi_wtick_seconds": -1.0,
+      "memory": {
+        "rss_bytes": 42692608,
+        "peak_rss_bytes": 42692608
+      }
+    }
+  ],
+  "verified_graphs": [
+    {
+      "graph_id": "n100_d0p1_seed42",
+      "file_sha256": "fc943240aaba76bb6cb8f61ab742b189ff43fc96df3adaafb8f0764914e99857",
+      "graph_sha256": "c49535d2ffbf5b9bfb133c819ed0ff762c85b309f19445461d2373cdeabf7be0",
+      "reference_sha256": "dcb81408c7f6d5396201a0e946e302534fd9c61fbdb217cd2910d958cb49040c",
+      "verified_before_timing": true
+    },
+    {
+      "graph_id": "n500_d0p1_seed42",
+      "file_sha256": "7fb42bf238e7991d3c8254080986216ca97ecea17a1c61ffc54f7a0006bdc6ae",
+      "graph_sha256": "e439f19f0297995da8dea5115b541cbeb291022f96f5f74d426b4777a701f1ff",
+      "reference_sha256": "e9f4bb6ba6ab58c2debe8fcef2546beaac7f21831688bf518dd42127fbd36699",
+      "verified_before_timing": true
+    },
+    {
+      "graph_id": "n1000_d0p1_seed42",
+      "file_sha256": "b1c82a43422ceb66b5e6ebf291dfd88fa30c385d21add35436051196bf91ebf5",
+      "graph_sha256": "3c516bfef51150a1be4c5437f37dd22410ef5eef6496c39319f2c02fbef19d66",
+      "reference_sha256": "28070f97a26175bac16533e02c78a46eb5d209da9ee6ca3b096389f8ed824c6b",
+      "verified_before_timing": true
+    },
+    {
+      "graph_id": "n2000_d0p1_seed42",
+      "file_sha256": "e081306dc5cb7a6b74fb93859574b1f39f60bd95b8fabe50c11cd3613bbe8e7e",
+      "graph_sha256": "88b4f4a3c78043db6cf86f6d338f270171fabd77ee437ed08708fa4a95c578b8",
+      "reference_sha256": "a3b585eca2a9cd68aa12a2b8d183840657b1c1e99002221b0c3dde74b15322f7",
+      "verified_before_timing": true
+    },
+    {
+      "graph_id": "n100_d0p5_seed42",
+      "file_sha256": "9adb5cb8709e158d96d41ea3663d730f2d1bcd3f09a9f4feab546b3b6b8931e9",
+      "graph_sha256": "2aff56f794b0206617775f420af85f86f9c078fff72a1e2d5fc7bfe333ab6885",
+      "reference_sha256": "dd61416f6486b26037c414a1e1e84261c6b3c635b7d9cfca60c751abc47891b3",
+      "verified_before_timing": true
+    },
+    {
+      "graph_id": "n500_d0p5_seed42",
+      "file_sha256": "002571d4ddf861d987c27e936ea5a12ac4dccba19148d3431bb37d791bc69708",
+      "graph_sha256": "2a8f44322a1e7717f73c8181f437d26e22231dfce041aeaf712a006cb8abe948",
+      "reference_sha256": "8b5be534f0e218ebf2b6d15073600e6c3e0f93f2bb061ace33c58352c4b261c1",
+      "verified_before_timing": true
+    },
+    {
+      "graph_id": "n1000_d0p5_seed42",
+      "file_sha256": "d5ba7cf9dccdd8521d69d24c4f297dc80869465c1a2645d28246ed2da5b3f584",
+      "graph_sha256": "9c7b38403171d5c25dc42b24ddb04b23faf447d99ab834a8e3971f6871dc522d",
+      "reference_sha256": "6b39088a971e70694c9c3ed3a8f95e92947f7356b9ed2133bd17e5bd97a6014c",
+      "verified_before_timing": true
+    },
+    {
+      "graph_id": "n2000_d0p5_seed42",
+      "file_sha256": "8e23abd56808cf881ffa9c62467d4f8c0df4a2bc040db7bd21085b0c5333d23a",
+      "graph_sha256": "05764b8d2942cb4ec64a9028ed55b1b4821eb9f031348e51fb7c6e12b2ba4156",
+      "reference_sha256": "d66c3fe190ffc303090f21d0cf940d570300e0db5263b3abb2124c4fc313d294",
+      "verified_before_timing": true
+    }
+  ],
+  "samples": [
+    {
+      "graph_id": "n100_d0p1_seed42",
+      "graph_sha256": "c49535d2ffbf5b9bfb133c819ed0ff762c85b309f19445461d2373cdeabf7be0",
+      "vertices": 100,
+      "density": 0.1,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "pilot",
+      "mode": "parallel",
+      "processes": 4,
+      "sample_kind": "warmup",
+      "repetition": 1,
+      "elapsed_seconds": 0.006162500008940697,
+      "rank_elapsed_seconds": [
+        0.006162500008940697,
+        0.006109600013587624,
+        0.0061080000014044344,
+        0.006108100002165884
+      ],
+      "verified": true,
+      "root_rss_bytes": 53280768,
+      "root_peak_rss_bytes": 54157312,
+      "total_rank_rss_bytes": 183803904,
+      "total_rank_peak_rss_bytes": 184680448,
+      "rank_memory": [
+        {
+          "rss_bytes": 53280768,
+          "peak_rss_bytes": 54157312
+        },
+        {
+          "rss_bytes": 43413504,
+          "peak_rss_bytes": 43413504
+        },
+        {
+          "rss_bytes": 43470848,
+          "peak_rss_bytes": 43470848
+        },
+        {
+          "rss_bytes": 43638784,
+          "peak_rss_bytes": 43638784
+        }
+      ],
+      "verification_errors": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "graph_id": "n100_d0p1_seed42",
+      "graph_sha256": "c49535d2ffbf5b9bfb133c819ed0ff762c85b309f19445461d2373cdeabf7be0",
+      "vertices": 100,
+      "density": 0.1,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "pilot",
+      "mode": "parallel",
+      "processes": 4,
+      "sample_kind": "measured",
+      "repetition": 1,
+      "elapsed_seconds": 0.0034748000325635076,
+      "rank_elapsed_seconds": [
+        0.0034748000325635076,
+        0.003437599982134998,
+        0.0034337000106461346,
+        0.003437999985180795
+      ],
+      "verified": true,
+      "root_rss_bytes": 53661696,
+      "root_peak_rss_bytes": 54157312,
+      "total_rank_rss_bytes": 184807424,
+      "total_rank_peak_rss_bytes": 185303040,
+      "rank_memory": [
+        {
+          "rss_bytes": 53661696,
+          "peak_rss_bytes": 54157312
+        },
+        {
+          "rss_bytes": 43540480,
+          "peak_rss_bytes": 43540480
+        },
+        {
+          "rss_bytes": 43737088,
+          "peak_rss_bytes": 43737088
+        },
+        {
+          "rss_bytes": 43868160,
+          "peak_rss_bytes": 43868160
+        }
+      ],
+      "verification_errors": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "graph_id": "n500_d0p1_seed42",
+      "graph_sha256": "e439f19f0297995da8dea5115b541cbeb291022f96f5f74d426b4777a701f1ff",
+      "vertices": 500,
+      "density": 0.1,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "pilot",
+      "mode": "parallel",
+      "processes": 4,
+      "sample_kind": "warmup",
+      "repetition": 1,
+      "elapsed_seconds": 0.051758899993728846,
+      "rank_elapsed_seconds": [
+        0.051758899993728846,
+        0.051704600045923144,
+        0.05170539999380708,
+        0.05170790001284331
+      ],
+      "verified": true,
+      "root_rss_bytes": 58200064,
+      "root_peak_rss_bytes": 61775872,
+      "total_rank_rss_bytes": 193421312,
+      "total_rank_peak_rss_bytes": 197963776,
+      "rank_memory": [
+        {
+          "rss_bytes": 58200064,
+          "peak_rss_bytes": 61775872
+        },
+        {
+          "rss_bytes": 44564480,
+          "peak_rss_bytes": 44564480
+        },
+        {
+          "rss_bytes": 45748224,
+          "peak_rss_bytes": 46714880
+        },
+        {
+          "rss_bytes": 44908544,
+          "peak_rss_bytes": 44908544
+        }
+      ],
+      "verification_errors": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "graph_id": "n500_d0p1_seed42",
+      "graph_sha256": "e439f19f0297995da8dea5115b541cbeb291022f96f5f74d426b4777a701f1ff",
+      "vertices": 500,
+      "density": 0.1,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "pilot",
+      "mode": "parallel",
+      "processes": 4,
+      "sample_kind": "measured",
+      "repetition": 1,
+      "elapsed_seconds": 0.05634710000595078,
+      "rank_elapsed_seconds": [
+        0.0563071999931708,
+        0.0562521000392735,
+        0.05634710000595078,
+        0.05625700001837686
+      ],
+      "verified": true,
+      "root_rss_bytes": 58880000,
+      "root_peak_rss_bytes": 62705664,
+      "total_rank_rss_bytes": 195149824,
+      "total_rank_peak_rss_bytes": 200478720,
+      "rank_memory": [
+        {
+          "rss_bytes": 58880000,
+          "peak_rss_bytes": 62705664
+        },
+        {
+          "rss_bytes": 45096960,
+          "peak_rss_bytes": 45096960
+        },
+        {
+          "rss_bytes": 45748224,
+          "peak_rss_bytes": 47251456
+        },
+        {
+          "rss_bytes": 45424640,
+          "peak_rss_bytes": 45424640
+        }
+      ],
+      "verification_errors": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "graph_id": "n1000_d0p1_seed42",
+      "graph_sha256": "3c516bfef51150a1be4c5437f37dd22410ef5eef6496c39319f2c02fbef19d66",
+      "vertices": 1000,
+      "density": 0.1,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "pilot",
+      "mode": "parallel",
+      "processes": 4,
+      "sample_kind": "warmup",
+      "repetition": 1,
+      "elapsed_seconds": 0.20007500000065193,
+      "rank_elapsed_seconds": [
+        0.20007500000065193,
+        0.19995819998439401,
+        0.19995009998092428,
+        0.19995189999463037
+      ],
+      "verified": true,
+      "root_rss_bytes": 66232320,
+      "root_peak_rss_bytes": 84160512,
+      "total_rank_rss_bytes": 209653760,
+      "total_rank_peak_rss_bytes": 237580288,
+      "rank_memory": [
+        {
+          "rss_bytes": 66232320,
+          "peak_rss_bytes": 84160512
+        },
+        {
+          "rss_bytes": 47120384,
+          "peak_rss_bytes": 49119232
+        },
+        {
+          "rss_bytes": 48861184,
+          "peak_rss_bytes": 54861824
+        },
+        {
+          "rss_bytes": 47439872,
+          "peak_rss_bytes": 49438720
+        }
+      ],
+      "verification_errors": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "graph_id": "n1000_d0p1_seed42",
+      "graph_sha256": "3c516bfef51150a1be4c5437f37dd22410ef5eef6496c39319f2c02fbef19d66",
+      "vertices": 1000,
+      "density": 0.1,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "pilot",
+      "mode": "parallel",
+      "processes": 4,
+      "sample_kind": "measured",
+      "repetition": 1,
+      "elapsed_seconds": 0.17704749997938052,
+      "rank_elapsed_seconds": [
+        0.17704749997938052,
+        0.17702449997887015,
+        0.177012600004673,
+        0.17700279998825863
+      ],
+      "verified": true,
+      "root_rss_bytes": 67223552,
+      "root_peak_rss_bytes": 85176320,
+      "total_rank_rss_bytes": 211660800,
+      "total_rank_peak_rss_bytes": 239583232,
+      "rank_memory": [
+        {
+          "rss_bytes": 67223552,
+          "peak_rss_bytes": 85176320
+        },
+        {
+          "rss_bytes": 48091136,
+          "peak_rss_bytes": 50089984
+        },
+        {
+          "rss_bytes": 48893952,
+          "peak_rss_bytes": 54865920
+        },
+        {
+          "rss_bytes": 47452160,
+          "peak_rss_bytes": 49451008
+        }
+      ],
+      "verification_errors": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "graph_id": "n2000_d0p1_seed42",
+      "graph_sha256": "88b4f4a3c78043db6cf86f6d338f270171fabd77ee437ed08708fa4a95c578b8",
+      "vertices": 2000,
+      "density": 0.1,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "pilot",
+      "mode": "parallel",
+      "processes": 4,
+      "sample_kind": "warmup",
+      "repetition": 1,
+      "elapsed_seconds": 0.7047191999736242,
+      "rank_elapsed_seconds": [
+        0.7047191999736242,
+        0.7046243000077084,
+        0.7045682999887504,
+        0.7045959999668412
+      ],
+      "verified": true,
+      "root_rss_bytes": 91582464,
+      "root_peak_rss_bytes": 163553280,
+      "total_rank_rss_bytes": 237510656,
+      "total_rank_peak_rss_bytes": 349478912,
+      "rank_memory": [
+        {
+          "rss_bytes": 91582464,
+          "peak_rss_bytes": 163553280
+        },
+        {
+          "rss_bytes": 49356800,
+          "peak_rss_bytes": 57356288
+        },
+        {
+          "rss_bytes": 48996352,
+          "peak_rss_bytes": 72994816
+        },
+        {
+          "rss_bytes": 47575040,
+          "peak_rss_bytes": 55574528
+        }
+      ],
+      "verification_errors": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "graph_id": "n2000_d0p1_seed42",
+      "graph_sha256": "88b4f4a3c78043db6cf86f6d338f270171fabd77ee437ed08708fa4a95c578b8",
+      "vertices": 2000,
+      "density": 0.1,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "pilot",
+      "mode": "parallel",
+      "processes": 4,
+      "sample_kind": "measured",
+      "repetition": 1,
+      "elapsed_seconds": 0.6454464999842457,
+      "rank_elapsed_seconds": [
+        0.6454464999842457,
+        0.6454016000498086,
+        0.6454079999821261,
+        0.6453994000330567
+      ],
+      "verified": true,
+      "root_rss_bytes": 91607040,
+      "root_peak_rss_bytes": 163590144,
+      "total_rank_rss_bytes": 237568000,
+      "total_rank_peak_rss_bytes": 349556736,
+      "rank_memory": [
+        {
+          "rss_bytes": 91607040,
+          "peak_rss_bytes": 163590144
+        },
+        {
+          "rss_bytes": 49373184,
+          "peak_rss_bytes": 57372672
+        },
+        {
+          "rss_bytes": 49000448,
+          "peak_rss_bytes": 73003008
+        },
+        {
+          "rss_bytes": 47587328,
+          "peak_rss_bytes": 55590912
+        }
+      ],
+      "verification_errors": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "graph_id": "n100_d0p5_seed42",
+      "graph_sha256": "2aff56f794b0206617775f420af85f86f9c078fff72a1e2d5fc7bfe333ab6885",
+      "vertices": 100,
+      "density": 0.5,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "pilot",
+      "mode": "parallel",
+      "processes": 4,
+      "sample_kind": "warmup",
+      "repetition": 1,
+      "elapsed_seconds": 0.004211599996779114,
+      "rank_elapsed_seconds": [
+        0.004211599996779114,
+        0.004175599955487996,
+        0.004170799977146089,
+        0.0041797999874688685
+      ],
+      "verified": true,
+      "root_rss_bytes": 59801600,
+      "root_peak_rss_bytes": 163590144,
+      "total_rank_rss_bytes": 205856768,
+      "total_rank_peak_rss_bytes": 349556736,
+      "rank_memory": [
+        {
+          "rss_bytes": 59801600,
+          "peak_rss_bytes": 163590144
+        },
+        {
+          "rss_bytes": 49397760,
+          "peak_rss_bytes": 57372672
+        },
+        {
+          "rss_bytes": 49041408,
+          "peak_rss_bytes": 73003008
+        },
+        {
+          "rss_bytes": 47616000,
+          "peak_rss_bytes": 55590912
+        }
+      ],
+      "verification_errors": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "graph_id": "n100_d0p5_seed42",
+      "graph_sha256": "2aff56f794b0206617775f420af85f86f9c078fff72a1e2d5fc7bfe333ab6885",
+      "vertices": 100,
+      "density": 0.5,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "pilot",
+      "mode": "parallel",
+      "processes": 4,
+      "sample_kind": "measured",
+      "repetition": 1,
+      "elapsed_seconds": 0.0032821999629959464,
+      "rank_elapsed_seconds": [
+        0.0032821999629959464,
+        0.003257000003941357,
+        0.0032531999750062823,
+        0.0032525999704375863
+      ],
+      "verified": true,
+      "root_rss_bytes": 59846656,
+      "root_peak_rss_bytes": 163590144,
+      "total_rank_rss_bytes": 206004224,
+      "total_rank_peak_rss_bytes": 349556736,
+      "rank_memory": [
+        {
+          "rss_bytes": 59846656,
+          "peak_rss_bytes": 163590144
+        },
+        {
+          "rss_bytes": 49430528,
+          "peak_rss_bytes": 57372672
+        },
+        {
+          "rss_bytes": 49082368,
+          "peak_rss_bytes": 73003008
+        },
+        {
+          "rss_bytes": 47644672,
+          "peak_rss_bytes": 55590912
+        }
+      ],
+      "verification_errors": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "graph_id": "n500_d0p5_seed42",
+      "graph_sha256": "2a8f44322a1e7717f73c8181f437d26e22231dfce041aeaf712a006cb8abe948",
+      "vertices": 500,
+      "density": 0.5,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "pilot",
+      "mode": "parallel",
+      "processes": 4,
+      "sample_kind": "warmup",
+      "repetition": 1,
+      "elapsed_seconds": 0.05464699998265132,
+      "rank_elapsed_seconds": [
+        0.05464699998265132,
+        0.054593399981968105,
+        0.054637599969282746,
+        0.05459389998577535
+      ],
+      "verified": true,
+      "root_rss_bytes": 62775296,
+      "root_peak_rss_bytes": 163590144,
+      "total_rank_rss_bytes": 210227200,
+      "total_rank_peak_rss_bytes": 349556736,
+      "rank_memory": [
+        {
+          "rss_bytes": 62775296,
+          "peak_rss_bytes": 163590144
+        },
+        {
+          "rss_bytes": 49934336,
+          "peak_rss_bytes": 57372672
+        },
+        {
+          "rss_bytes": 49364992,
+          "peak_rss_bytes": 73003008
+        },
+        {
+          "rss_bytes": 48152576,
+          "peak_rss_bytes": 55590912
+        }
+      ],
+      "verification_errors": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "graph_id": "n500_d0p5_seed42",
+      "graph_sha256": "2a8f44322a1e7717f73c8181f437d26e22231dfce041aeaf712a006cb8abe948",
+      "vertices": 500,
+      "density": 0.5,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "pilot",
+      "mode": "parallel",
+      "processes": 4,
+      "sample_kind": "measured",
+      "repetition": 1,
+      "elapsed_seconds": 0.055134299967903644,
+      "rank_elapsed_seconds": [
+        0.055134299967903644,
+        0.055058800033293664,
+        0.05510659998981282,
+        0.05506210000021383
+      ],
+      "verified": true,
+      "root_rss_bytes": 63479808,
+      "root_peak_rss_bytes": 163590144,
+      "total_rank_rss_bytes": 212455424,
+      "total_rank_peak_rss_bytes": 349556736,
+      "rank_memory": [
+        {
+          "rss_bytes": 63479808,
+          "peak_rss_bytes": 163590144
+        },
+        {
+          "rss_bytes": 50446336,
+          "peak_rss_bytes": 57372672
+        },
+        {
+          "rss_bytes": 49864704,
+          "peak_rss_bytes": 73003008
+        },
+        {
+          "rss_bytes": 48664576,
+          "peak_rss_bytes": 55590912
+        }
+      ],
+      "verification_errors": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "graph_id": "n1000_d0p5_seed42",
+      "graph_sha256": "9c7b38403171d5c25dc42b24ddb04b23faf447d99ab834a8e3971f6871dc522d",
+      "vertices": 1000,
+      "density": 0.5,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "pilot",
+      "mode": "parallel",
+      "processes": 4,
+      "sample_kind": "warmup",
+      "repetition": 1,
+      "elapsed_seconds": 0.21195299999089912,
+      "rank_elapsed_seconds": [
+        0.21195299999089912,
+        0.21191030001500621,
+        0.2118995999917388,
+        0.21190980001119897
+      ],
+      "verified": true,
+      "root_rss_bytes": 68681728,
+      "root_peak_rss_bytes": 163590144,
+      "total_rank_rss_bytes": 217706496,
+      "total_rank_peak_rss_bytes": 349556736,
+      "rank_memory": [
+        {
+          "rss_bytes": 68681728,
+          "peak_rss_bytes": 163590144
+        },
+        {
+          "rss_bytes": 50454528,
+          "peak_rss_bytes": 57372672
+        },
+        {
+          "rss_bytes": 49868800,
+          "peak_rss_bytes": 73003008
+        },
+        {
+          "rss_bytes": 48701440,
+          "peak_rss_bytes": 55590912
+        }
+      ],
+      "verification_errors": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "graph_id": "n1000_d0p5_seed42",
+      "graph_sha256": "9c7b38403171d5c25dc42b24ddb04b23faf447d99ab834a8e3971f6871dc522d",
+      "vertices": 1000,
+      "density": 0.5,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "pilot",
+      "mode": "parallel",
+      "processes": 4,
+      "sample_kind": "measured",
+      "repetition": 1,
+      "elapsed_seconds": 0.20513600000413135,
+      "rank_elapsed_seconds": [
+        0.20513600000413135,
+        0.20507219998398796,
+        0.20508139999583364,
+        0.2050726999877952
+      ],
+      "verified": true,
+      "root_rss_bytes": 68685824,
+      "root_peak_rss_bytes": 163590144,
+      "total_rank_rss_bytes": 217763840,
+      "total_rank_peak_rss_bytes": 349556736,
+      "rank_memory": [
+        {
+          "rss_bytes": 68685824,
+          "peak_rss_bytes": 163590144
+        },
+        {
+          "rss_bytes": 50462720,
+          "peak_rss_bytes": 57372672
+        },
+        {
+          "rss_bytes": 49905664,
+          "peak_rss_bytes": 73003008
+        },
+        {
+          "rss_bytes": 48709632,
+          "peak_rss_bytes": 55590912
+        }
+      ],
+      "verification_errors": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "graph_id": "n2000_d0p5_seed42",
+      "graph_sha256": "05764b8d2942cb4ec64a9028ed55b1b4821eb9f031348e51fb7c6e12b2ba4156",
+      "vertices": 2000,
+      "density": 0.5,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "pilot",
+      "mode": "parallel",
+      "processes": 4,
+      "sample_kind": "warmup",
+      "repetition": 1,
+      "elapsed_seconds": 0.8314330000430346,
+      "rank_elapsed_seconds": [
+        0.8314330000430346,
+        0.83132110000588,
+        0.8313684000167996,
+        0.8313264000462368
+      ],
+      "verified": true,
+      "root_rss_bytes": 92962816,
+      "root_peak_rss_bytes": 164937728,
+      "total_rank_rss_bytes": 242094080,
+      "total_rank_peak_rss_bytes": 354062336,
+      "rank_memory": [
+        {
+          "rss_bytes": 92962816,
+          "peak_rss_bytes": 164937728
+        },
+        {
+          "rss_bytes": 50483200,
+          "peak_rss_bytes": 58482688
+        },
+        {
+          "rss_bytes": 49917952,
+          "peak_rss_bytes": 73912320
+        },
+        {
+          "rss_bytes": 48730112,
+          "peak_rss_bytes": 56729600
+        }
+      ],
+      "verification_errors": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "graph_id": "n2000_d0p5_seed42",
+      "graph_sha256": "05764b8d2942cb4ec64a9028ed55b1b4821eb9f031348e51fb7c6e12b2ba4156",
+      "vertices": 2000,
+      "density": 0.5,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "pilot",
+      "mode": "parallel",
+      "processes": 4,
+      "sample_kind": "measured",
+      "repetition": 1,
+      "elapsed_seconds": 0.8274202999891713,
+      "rank_elapsed_seconds": [
+        0.8274202999891713,
+        0.8273749999934807,
+        0.8273726999759674,
+        0.82738099998096
+      ],
+      "verified": true,
+      "root_rss_bytes": 92995584,
+      "root_peak_rss_bytes": 164978688,
+      "total_rank_rss_bytes": 242159616,
+      "total_rank_peak_rss_bytes": 354148352,
+      "rank_memory": [
+        {
+          "rss_bytes": 92995584,
+          "peak_rss_bytes": 164978688
+        },
+        {
+          "rss_bytes": 50499584,
+          "peak_rss_bytes": 58499072
+        },
+        {
+          "rss_bytes": 49922048,
+          "peak_rss_bytes": 73924608
+        },
+        {
+          "rss_bytes": 48742400,
+          "peak_rss_bytes": 56745984
+        }
+      ],
+      "verification_errors": [
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "final_ranks": [
+    {
+      "rank": 0,
+      "pid": 30540,
+      "processor_name": "SHENRON",
+      "affinity_logical_cpu_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "environment": {
+        "FI_PROVIDER_PATH": "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Library\\bin",
+        "HYDRA_BSTRAP_DEBUG": "0",
+        "HYDRA_BSTRAP_DOWNSTREAM_STDIN": "-1",
+        "HYDRA_BSTRAP_LAUNCHER": "powershell",
+        "HYDRA_BSTRAP_LOCALHOST": "SHENRON",
+        "HYDRA_BSTRAP_NODE_ID": "0",
+        "HYDRA_BSTRAP_NUM_DOWNSTREAM_PROXIES": "0",
+        "HYDRA_BSTRAP_NUM_LAUNCHES": "-1",
+        "HYDRA_BSTRAP_PGID": "0",
+        "HYDRA_BSTRAP_PROXY_ID": "0",
+        "HYDRA_BSTRAP_SUBTREE_SIZE": "1",
+        "HYDRA_BSTRAP_TREE_WIDTH": "1",
+        "HYDRA_BSTRAP_UPSTREAM_FD": "344",
+        "HYDRA_IP_VERSION": "2",
+        "HYDRA_LAUNCH_TYPE": "2",
+        "I_MPI_HYDRA_TOPOLIB": "ipl2",
+        "I_MPI_HYDRA_UUID": "388e0000-ffd1-1930-0000-00009d410000",
+        "I_MPI_INFO_BRAND": "Intel(R) Core(TM) i7-14650HX",
+        "I_MPI_INFO_CACHE1": "0,0,4,4,8,8,12,12,16,16,20,20,24,24,28,28,32,33,34,35,36,37,38,39",
+        "I_MPI_INFO_CACHE2": "0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,8,8,9,9,9,9",
+        "I_MPI_INFO_CACHE3": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+        "I_MPI_INFO_CACHES": "3",
+        "I_MPI_INFO_CACHE_SHARE": "2,8,128",
+        "I_MPI_INFO_CACHE_SIZE": "49152,2097152,31457280",
+        "I_MPI_INFO_CORE": "0,0,4,4,8,8,12,12,16,16,20,20,24,24,28,28,32,33,34,35,36,37,38,39",
+        "I_MPI_INFO_C_NAME": "Unknown",
+        "I_MPI_INFO_DESC": "654311424",
+        "I_MPI_INFO_FLGB": "597436329",
+        "I_MPI_INFO_FLGC": "-330869",
+        "I_MPI_INFO_FLGCEXT": "406849444",
+        "I_MPI_INFO_FLGD": "-1077150721",
+        "I_MPI_INFO_FLGDEXT": "-1139227632",
+        "I_MPI_INFO_LCPU": "24",
+        "I_MPI_INFO_MODE": "775",
+        "I_MPI_INFO_NC": "16",
+        "I_MPI_INFO_NP": "1",
+        "I_MPI_INFO_PACK": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+        "I_MPI_INFO_SERIAL": "0000",
+        "I_MPI_INFO_SIGN": "722545",
+        "I_MPI_INFO_STATE": "0",
+        "I_MPI_INFO_THREAD": "0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,0,0,0,0,0,0,0",
+        "I_MPI_INFO_VEND": "1",
+        "I_MPI_PIN": "0",
+        "I_MPI_PIN_INFO": "0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23",
+        "I_MPI_PIN_MAPPING": "4:0 0,1 0,2 0,3 0",
+        "MKL_NUM_THREADS": "1",
+        "MPI_LOCALNRANKS": "4",
+        "MPI_LOCALRANKID": "0",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "PMI_FD": "292",
+        "PMI_RANK": "0",
+        "PMI_SIZE": "4"
+      },
+      "python_executable": "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Scripts\\python.exe",
+      "python_version": "3.14.3",
+      "python_architecture_bits": 64,
+      "numpy_version": "2.5.4",
+      "mpi4py_version": "4.1.2",
+      "psutil_version": "7.2.2",
+      "mpi_vendor": [
+        "Intel MPI",
+        [
+          2021,
+          18,
+          1
+        ]
+      ],
+      "mpi_library_version": "Intel(R) MPI Library 2021.18.1 for Windows* OS",
+      "mpi_wtick_seconds": -1.0,
+      "memory": {
+        "rss_bytes": 61005824,
+        "peak_rss_bytes": 164978688
+      }
+    },
+    {
+      "rank": 1,
+      "pid": 32992,
+      "processor_name": "SHENRON",
+      "affinity_logical_cpu_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "environment": {
+        "FI_PROVIDER_PATH": "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Library\\bin",
+        "HYDRA_BSTRAP_DEBUG": "0",
+        "HYDRA_BSTRAP_DOWNSTREAM_STDIN": "-1",
+        "HYDRA_BSTRAP_LAUNCHER": "powershell",
+        "HYDRA_BSTRAP_LOCALHOST": "SHENRON",
+        "HYDRA_BSTRAP_NODE_ID": "0",
+        "HYDRA_BSTRAP_NUM_DOWNSTREAM_PROXIES": "0",
+        "HYDRA_BSTRAP_NUM_LAUNCHES": "-1",
+        "HYDRA_BSTRAP_PGID": "0",
+        "HYDRA_BSTRAP_PROXY_ID": "0",
+        "HYDRA_BSTRAP_SUBTREE_SIZE": "1",
+        "HYDRA_BSTRAP_TREE_WIDTH": "1",
+        "HYDRA_BSTRAP_UPSTREAM_FD": "344",
+        "HYDRA_IP_VERSION": "2",
+        "HYDRA_LAUNCH_TYPE": "2",
+        "I_MPI_HYDRA_TOPOLIB": "ipl2",
+        "I_MPI_HYDRA_UUID": "388e0000-ffd1-1930-0000-00009d410000",
+        "I_MPI_INFO_BRAND": "Intel(R) Core(TM) i7-14650HX",
+        "I_MPI_INFO_CACHE1": "0,0,4,4,8,8,12,12,16,16,20,20,24,24,28,28,32,33,34,35,36,37,38,39",
+        "I_MPI_INFO_CACHE2": "0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,8,8,9,9,9,9",
+        "I_MPI_INFO_CACHE3": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+        "I_MPI_INFO_CACHES": "3",
+        "I_MPI_INFO_CACHE_SHARE": "2,8,128",
+        "I_MPI_INFO_CACHE_SIZE": "49152,2097152,31457280",
+        "I_MPI_INFO_CORE": "0,0,4,4,8,8,12,12,16,16,20,20,24,24,28,28,32,33,34,35,36,37,38,39",
+        "I_MPI_INFO_C_NAME": "Unknown",
+        "I_MPI_INFO_DESC": "654311424",
+        "I_MPI_INFO_FLGB": "597436329",
+        "I_MPI_INFO_FLGC": "-330869",
+        "I_MPI_INFO_FLGCEXT": "406849444",
+        "I_MPI_INFO_FLGD": "-1077150721",
+        "I_MPI_INFO_FLGDEXT": "-1139227632",
+        "I_MPI_INFO_LCPU": "24",
+        "I_MPI_INFO_MODE": "775",
+        "I_MPI_INFO_NC": "16",
+        "I_MPI_INFO_NP": "1",
+        "I_MPI_INFO_PACK": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+        "I_MPI_INFO_SERIAL": "0000",
+        "I_MPI_INFO_SIGN": "722545",
+        "I_MPI_INFO_STATE": "0",
+        "I_MPI_INFO_THREAD": "0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,0,0,0,0,0,0,0",
+        "I_MPI_INFO_VEND": "1",
+        "I_MPI_PIN": "0",
+        "I_MPI_PIN_INFO": "0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23",
+        "I_MPI_PIN_MAPPING": "4:0 0,1 0,2 0,3 0",
+        "MKL_NUM_THREADS": "1",
+        "MPI_LOCALNRANKS": "4",
+        "MPI_LOCALRANKID": "1",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "PMI_FD": "324",
+        "PMI_RANK": "1",
+        "PMI_SIZE": "4"
+      },
+      "python_executable": "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Scripts\\python.exe",
+      "python_version": "3.14.3",
+      "python_architecture_bits": 64,
+      "numpy_version": "2.5.4",
+      "mpi4py_version": "4.1.2",
+      "psutil_version": "7.2.2",
+      "mpi_vendor": [
+        "Intel MPI",
+        [
+          2021,
+          18,
+          1
+        ]
+      ],
+      "mpi_library_version": "Intel(R) MPI Library 2021.18.1 for Windows* OS",
+      "mpi_wtick_seconds": -1.0,
+      "memory": {
+        "rss_bytes": 50499584,
+        "peak_rss_bytes": 58499072
+      }
+    },
+    {
+      "rank": 2,
+      "pid": 7228,
+      "processor_name": "SHENRON",
+      "affinity_logical_cpu_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "environment": {
+        "FI_PROVIDER_PATH": "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Library\\bin",
+        "HYDRA_BSTRAP_DEBUG": "0",
+        "HYDRA_BSTRAP_DOWNSTREAM_STDIN": "-1",
+        "HYDRA_BSTRAP_LAUNCHER": "powershell",
+        "HYDRA_BSTRAP_LOCALHOST": "SHENRON",
+        "HYDRA_BSTRAP_NODE_ID": "0",
+        "HYDRA_BSTRAP_NUM_DOWNSTREAM_PROXIES": "0",
+        "HYDRA_BSTRAP_NUM_LAUNCHES": "-1",
+        "HYDRA_BSTRAP_PGID": "0",
+        "HYDRA_BSTRAP_PROXY_ID": "0",
+        "HYDRA_BSTRAP_SUBTREE_SIZE": "1",
+        "HYDRA_BSTRAP_TREE_WIDTH": "1",
+        "HYDRA_BSTRAP_UPSTREAM_FD": "344",
+        "HYDRA_IP_VERSION": "2",
+        "HYDRA_LAUNCH_TYPE": "2",
+        "I_MPI_HYDRA_TOPOLIB": "ipl2",
+        "I_MPI_HYDRA_UUID": "388e0000-ffd1-1930-0000-00009d410000",
+        "I_MPI_INFO_BRAND": "Intel(R) Core(TM) i7-14650HX",
+        "I_MPI_INFO_CACHE1": "0,0,4,4,8,8,12,12,16,16,20,20,24,24,28,28,32,33,34,35,36,37,38,39",
+        "I_MPI_INFO_CACHE2": "0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,8,8,9,9,9,9",
+        "I_MPI_INFO_CACHE3": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+        "I_MPI_INFO_CACHES": "3",
+        "I_MPI_INFO_CACHE_SHARE": "2,8,128",
+        "I_MPI_INFO_CACHE_SIZE": "49152,2097152,31457280",
+        "I_MPI_INFO_CORE": "0,0,4,4,8,8,12,12,16,16,20,20,24,24,28,28,32,33,34,35,36,37,38,39",
+        "I_MPI_INFO_C_NAME": "Unknown",
+        "I_MPI_INFO_DESC": "654311424",
+        "I_MPI_INFO_FLGB": "597436329",
+        "I_MPI_INFO_FLGC": "-330869",
+        "I_MPI_INFO_FLGCEXT": "406849444",
+        "I_MPI_INFO_FLGD": "-1077150721",
+        "I_MPI_INFO_FLGDEXT": "-1139227632",
+        "I_MPI_INFO_LCPU": "24",
+        "I_MPI_INFO_MODE": "775",
+        "I_MPI_INFO_NC": "16",
+        "I_MPI_INFO_NP": "1",
+        "I_MPI_INFO_PACK": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+        "I_MPI_INFO_SERIAL": "0000",
+        "I_MPI_INFO_SIGN": "722545",
+        "I_MPI_INFO_STATE": "0",
+        "I_MPI_INFO_THREAD": "0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,0,0,0,0,0,0,0",
+        "I_MPI_INFO_VEND": "1",
+        "I_MPI_PIN": "0",
+        "I_MPI_PIN_INFO": "0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23",
+        "I_MPI_PIN_MAPPING": "4:0 0,1 0,2 0,3 0",
+        "MKL_NUM_THREADS": "1",
+        "MPI_LOCALNRANKS": "4",
+        "MPI_LOCALRANKID": "2",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "PMI_FD": "400",
+        "PMI_RANK": "2",
+        "PMI_SIZE": "4"
+      },
+      "python_executable": "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Scripts\\python.exe",
+      "python_version": "3.14.3",
+      "python_architecture_bits": 64,
+      "numpy_version": "2.5.4",
+      "mpi4py_version": "4.1.2",
+      "psutil_version": "7.2.2",
+      "mpi_vendor": [
+        "Intel MPI",
+        [
+          2021,
+          18,
+          1
+        ]
+      ],
+      "mpi_library_version": "Intel(R) MPI Library 2021.18.1 for Windows* OS",
+      "mpi_wtick_seconds": -1.0,
+      "memory": {
+        "rss_bytes": 49922048,
+        "peak_rss_bytes": 73924608
+      }
+    },
+    {
+      "rank": 3,
+      "pid": 5156,
+      "processor_name": "SHENRON",
+      "affinity_logical_cpu_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "environment": {
+        "FI_PROVIDER_PATH": "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Library\\bin",
+        "HYDRA_BSTRAP_DEBUG": "0",
+        "HYDRA_BSTRAP_DOWNSTREAM_STDIN": "-1",
+        "HYDRA_BSTRAP_LAUNCHER": "powershell",
+        "HYDRA_BSTRAP_LOCALHOST": "SHENRON",
+        "HYDRA_BSTRAP_NODE_ID": "0",
+        "HYDRA_BSTRAP_NUM_DOWNSTREAM_PROXIES": "0",
+        "HYDRA_BSTRAP_NUM_LAUNCHES": "-1",
+        "HYDRA_BSTRAP_PGID": "0",
+        "HYDRA_BSTRAP_PROXY_ID": "0",
+        "HYDRA_BSTRAP_SUBTREE_SIZE": "1",
+        "HYDRA_BSTRAP_TREE_WIDTH": "1",
+        "HYDRA_BSTRAP_UPSTREAM_FD": "344",
+        "HYDRA_IP_VERSION": "2",
+        "HYDRA_LAUNCH_TYPE": "2",
+        "I_MPI_HYDRA_TOPOLIB": "ipl2",
+        "I_MPI_HYDRA_UUID": "388e0000-ffd1-1930-0000-00009d410000",
+        "I_MPI_INFO_BRAND": "Intel(R) Core(TM) i7-14650HX",
+        "I_MPI_INFO_CACHE1": "0,0,4,4,8,8,12,12,16,16,20,20,24,24,28,28,32,33,34,35,36,37,38,39",
+        "I_MPI_INFO_CACHE2": "0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,8,8,9,9,9,9",
+        "I_MPI_INFO_CACHE3": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+        "I_MPI_INFO_CACHES": "3",
+        "I_MPI_INFO_CACHE_SHARE": "2,8,128",
+        "I_MPI_INFO_CACHE_SIZE": "49152,2097152,31457280",
+        "I_MPI_INFO_CORE": "0,0,4,4,8,8,12,12,16,16,20,20,24,24,28,28,32,33,34,35,36,37,38,39",
+        "I_MPI_INFO_C_NAME": "Unknown",
+        "I_MPI_INFO_DESC": "654311424",
+        "I_MPI_INFO_FLGB": "597436329",
+        "I_MPI_INFO_FLGC": "-330869",
+        "I_MPI_INFO_FLGCEXT": "406849444",
+        "I_MPI_INFO_FLGD": "-1077150721",
+        "I_MPI_INFO_FLGDEXT": "-1139227632",
+        "I_MPI_INFO_LCPU": "24",
+        "I_MPI_INFO_MODE": "775",
+        "I_MPI_INFO_NC": "16",
+        "I_MPI_INFO_NP": "1",
+        "I_MPI_INFO_PACK": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+        "I_MPI_INFO_SERIAL": "0000",
+        "I_MPI_INFO_SIGN": "722545",
+        "I_MPI_INFO_STATE": "0",
+        "I_MPI_INFO_THREAD": "0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,0,0,0,0,0,0,0",
+        "I_MPI_INFO_VEND": "1",
+        "I_MPI_PIN": "0",
+        "I_MPI_PIN_INFO": "0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23",
+        "I_MPI_PIN_MAPPING": "4:0 0,1 0,2 0,3 0",
+        "MKL_NUM_THREADS": "1",
+        "MPI_LOCALNRANKS": "4",
+        "MPI_LOCALRANKID": "3",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "PMI_FD": "432",
+        "PMI_RANK": "3",
+        "PMI_SIZE": "4"
+      },
+      "python_executable": "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Scripts\\python.exe",
+      "python_version": "3.14.3",
+      "python_architecture_bits": 64,
+      "numpy_version": "2.5.4",
+      "mpi4py_version": "4.1.2",
+      "psutil_version": "7.2.2",
+      "mpi_vendor": [
+        "Intel MPI",
+        [
+          2021,
+          18,
+          1
+        ]
+      ],
+      "mpi_library_version": "Intel(R) MPI Library 2021.18.1 for Windows* OS",
+      "mpi_wtick_seconds": -1.0,
+      "memory": {
+        "rss_bytes": 48746496,
+        "peak_rss_bytes": 56745984
+      }
+    }
+  ]
+}

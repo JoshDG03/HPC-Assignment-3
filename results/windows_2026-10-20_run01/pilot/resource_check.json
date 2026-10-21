@@ -1,0 +1,8 @@
+{
+  "maximum_public_call_seconds": 2.356274299963843,
+  "maximum_root_rss_bytes": 97677312,
+  "maximum_sum_rank_rss_bytes": 898842624,
+  "maximum_sum_rank_lifetime_peak_bytes_not_simultaneous": 1042898944,
+  "available_ram_bytes_after_pilot": 5020991488,
+  "all_samples_verified": true
+}

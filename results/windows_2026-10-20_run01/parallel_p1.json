@@ -1,0 +1,1859 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-10-21T01:52:52.375079+00:00",
+  "completed_utc": "2026-10-21T01:53:26.165324+00:00",
+  "status": "complete",
+  "command_argv": [
+    "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Scripts\\python.exe",
+    "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\benchmark_worker.py",
+    "--manifest",
+    "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\main_manifest.json",
+    "--output",
+    "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\raw_parts\\parallel_p1.csv",
+    "--mode",
+    "parallel",
+    "--phase",
+    "main",
+    "--repetitions",
+    "5",
+    "--warmups",
+    "1",
+    "--run-metadata",
+    "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\parallel_p1.json"
+  ],
+  "working_directory": "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3",
+  "manifest_path": "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\main_manifest.json",
+  "manifest_file_sha256": "fd16b44e638b76fd6f2eae475dae95123f370f2790dc9a7074c7c3e7cee505ea",
+  "raw_csv_path": "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\raw_parts\\parallel_p1.csv",
+  "mode": "parallel",
+  "phase": "main",
+  "processes": 1,
+  "warmups_per_graph": 1,
+  "measured_repetitions_per_graph": 5,
+  "timing_method": "MPI.Wtime immediately around the complete public dijkstra() call; parallel Barrier before each call; maximum local elapsed time reduced after stopping the timers.",
+  "excluded_from_timing": [
+    "MPI startup",
+    "imports",
+    "graph generation/loading",
+    "hash checks",
+    "reference verification",
+    "pre-call Barrier",
+    "elapsed-time reduction",
+    "memory sampling",
+    "printing",
+    "CSV/metadata writes"
+  ],
+  "memory_method": "RSS sampled outside timing after each solve; peak RSS is Windows process-lifetime peak working set, including interpreter/MPI setup. Summed per-rank peaks are not a simultaneous aggregate peak.",
+  "initial_ranks": [
+    {
+      "rank": 0,
+      "pid": 13448,
+      "processor_name": "SHENRON",
+      "affinity_logical_cpu_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "environment": {
+        "FI_PROVIDER_PATH": "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Library\\bin",
+        "HYDRA_BSTRAP_DEBUG": "0",
+        "HYDRA_BSTRAP_DOWNSTREAM_STDIN": "-1",
+        "HYDRA_BSTRAP_LAUNCHER": "powershell",
+        "HYDRA_BSTRAP_LOCALHOST": "SHENRON",
+        "HYDRA_BSTRAP_NODE_ID": "0",
+        "HYDRA_BSTRAP_NUM_DOWNSTREAM_PROXIES": "0",
+        "HYDRA_BSTRAP_NUM_LAUNCHES": "-1",
+        "HYDRA_BSTRAP_PGID": "0",
+        "HYDRA_BSTRAP_PROXY_ID": "0",
+        "HYDRA_BSTRAP_SUBTREE_SIZE": "1",
+        "HYDRA_BSTRAP_TREE_WIDTH": "1",
+        "HYDRA_BSTRAP_UPSTREAM_FD": "348",
+        "HYDRA_IP_VERSION": "2",
+        "HYDRA_LAUNCH_TYPE": "2",
+        "I_MPI_HYDRA_TOPOLIB": "ipl2",
+        "I_MPI_HYDRA_UUID": "18600000-f051-9893-0000-0000f1300000",
+        "I_MPI_INFO_BRAND": "Intel(R) Core(TM) i7-14650HX",
+        "I_MPI_INFO_CACHE1": "0,0,4,4,8,8,12,12,16,16,20,20,24,24,28,28,32,33,34,35,36,37,38,39",
+        "I_MPI_INFO_CACHE2": "0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,8,8,9,9,9,9",
+        "I_MPI_INFO_CACHE3": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+        "I_MPI_INFO_CACHES": "3",
+        "I_MPI_INFO_CACHE_SHARE": "2,8,128",
+        "I_MPI_INFO_CACHE_SIZE": "49152,2097152,31457280",
+        "I_MPI_INFO_CORE": "0,0,4,4,8,8,12,12,16,16,20,20,24,24,28,28,32,33,34,35,36,37,38,39",
+        "I_MPI_INFO_C_NAME": "Unknown",
+        "I_MPI_INFO_DESC": "654311424",
+        "I_MPI_INFO_FLGB": "597436329",
+        "I_MPI_INFO_FLGC": "-330869",
+        "I_MPI_INFO_FLGCEXT": "406849444",
+        "I_MPI_INFO_FLGD": "-1077150721",
+        "I_MPI_INFO_FLGDEXT": "-1139227632",
+        "I_MPI_INFO_LCPU": "24",
+        "I_MPI_INFO_MODE": "775",
+        "I_MPI_INFO_NC": "16",
+        "I_MPI_INFO_NP": "1",
+        "I_MPI_INFO_PACK": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+        "I_MPI_INFO_SERIAL": "0000",
+        "I_MPI_INFO_SIGN": "722545",
+        "I_MPI_INFO_STATE": "0",
+        "I_MPI_INFO_THREAD": "0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,0,0,0,0,0,0,0",
+        "I_MPI_INFO_VEND": "1",
+        "I_MPI_PIN": "0",
+        "I_MPI_PIN_INFO": "0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23",
+        "I_MPI_PIN_MAPPING": "1:0 0",
+        "MKL_NUM_THREADS": "1",
+        "MPI_LOCALNRANKS": "1",
+        "MPI_LOCALRANKID": "0",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "PMI_FD": "300",
+        "PMI_RANK": "0",
+        "PMI_SIZE": "1"
+      },
+      "python_executable": "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Scripts\\python.exe",
+      "python_version": "3.14.3",
+      "python_architecture_bits": 64,
+      "numpy_version": "2.5.4",
+      "mpi4py_version": "4.1.2",
+      "psutil_version": "7.2.2",
+      "mpi_vendor": [
+        "Intel MPI",
+        [
+          2021,
+          18,
+          1
+        ]
+      ],
+      "mpi_library_version": "Intel(R) MPI Library 2021.18.1 for Windows* OS",
+      "mpi_wtick_seconds": -1.0,
+      "memory": {
+        "rss_bytes": 44646400,
+        "peak_rss_bytes": 44646400
+      }
+    }
+  ],
+  "verified_graphs": [
+    {
+      "graph_id": "n100_d0p1_seed42",
+      "file_sha256": "fc943240aaba76bb6cb8f61ab742b189ff43fc96df3adaafb8f0764914e99857",
+      "graph_sha256": "c49535d2ffbf5b9bfb133c819ed0ff762c85b309f19445461d2373cdeabf7be0",
+      "reference_sha256": "dcb81408c7f6d5396201a0e946e302534fd9c61fbdb217cd2910d958cb49040c",
+      "verified_before_timing": true
+    },
+    {
+      "graph_id": "n500_d0p1_seed42",
+      "file_sha256": "7fb42bf238e7991d3c8254080986216ca97ecea17a1c61ffc54f7a0006bdc6ae",
+      "graph_sha256": "e439f19f0297995da8dea5115b541cbeb291022f96f5f74d426b4777a701f1ff",
+      "reference_sha256": "e9f4bb6ba6ab58c2debe8fcef2546beaac7f21831688bf518dd42127fbd36699",
+      "verified_before_timing": true
+    },
+    {
+      "graph_id": "n1000_d0p1_seed42",
+      "file_sha256": "b1c82a43422ceb66b5e6ebf291dfd88fa30c385d21add35436051196bf91ebf5",
+      "graph_sha256": "3c516bfef51150a1be4c5437f37dd22410ef5eef6496c39319f2c02fbef19d66",
+      "reference_sha256": "28070f97a26175bac16533e02c78a46eb5d209da9ee6ca3b096389f8ed824c6b",
+      "verified_before_timing": true
+    },
+    {
+      "graph_id": "n2000_d0p1_seed42",
+      "file_sha256": "e081306dc5cb7a6b74fb93859574b1f39f60bd95b8fabe50c11cd3613bbe8e7e",
+      "graph_sha256": "88b4f4a3c78043db6cf86f6d338f270171fabd77ee437ed08708fa4a95c578b8",
+      "reference_sha256": "a3b585eca2a9cd68aa12a2b8d183840657b1c1e99002221b0c3dde74b15322f7",
+      "verified_before_timing": true
+    },
+    {
+      "graph_id": "n100_d0p5_seed42",
+      "file_sha256": "9adb5cb8709e158d96d41ea3663d730f2d1bcd3f09a9f4feab546b3b6b8931e9",
+      "graph_sha256": "2aff56f794b0206617775f420af85f86f9c078fff72a1e2d5fc7bfe333ab6885",
+      "reference_sha256": "dd61416f6486b26037c414a1e1e84261c6b3c635b7d9cfca60c751abc47891b3",
+      "verified_before_timing": true
+    },
+    {
+      "graph_id": "n500_d0p5_seed42",
+      "file_sha256": "002571d4ddf861d987c27e936ea5a12ac4dccba19148d3431bb37d791bc69708",
+      "graph_sha256": "2a8f44322a1e7717f73c8181f437d26e22231dfce041aeaf712a006cb8abe948",
+      "reference_sha256": "8b5be534f0e218ebf2b6d15073600e6c3e0f93f2bb061ace33c58352c4b261c1",
+      "verified_before_timing": true
+    },
+    {
+      "graph_id": "n1000_d0p5_seed42",
+      "file_sha256": "d5ba7cf9dccdd8521d69d24c4f297dc80869465c1a2645d28246ed2da5b3f584",
+      "graph_sha256": "9c7b38403171d5c25dc42b24ddb04b23faf447d99ab834a8e3971f6871dc522d",
+      "reference_sha256": "6b39088a971e70694c9c3ed3a8f95e92947f7356b9ed2133bd17e5bd97a6014c",
+      "verified_before_timing": true
+    },
+    {
+      "graph_id": "n2000_d0p5_seed42",
+      "file_sha256": "8e23abd56808cf881ffa9c62467d4f8c0df4a2bc040db7bd21085b0c5333d23a",
+      "graph_sha256": "05764b8d2942cb4ec64a9028ed55b1b4821eb9f031348e51fb7c6e12b2ba4156",
+      "reference_sha256": "d66c3fe190ffc303090f21d0cf940d570300e0db5263b3abb2124c4fc313d294",
+      "verified_before_timing": true
+    }
+  ],
+  "samples": [
+    {
+      "graph_id": "n100_d0p1_seed42",
+      "graph_sha256": "c49535d2ffbf5b9bfb133c819ed0ff762c85b309f19445461d2373cdeabf7be0",
+      "vertices": 100,
+      "density": 0.1,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "main",
+      "mode": "parallel",
+      "processes": 1,
+      "sample_kind": "warmup",
+      "repetition": 1,
+      "elapsed_seconds": 0.005225799977779388,
+      "rank_elapsed_seconds": [
+        0.005225799977779388
+      ],
+      "verified": true,
+      "root_rss_bytes": 51396608,
+      "root_peak_rss_bytes": 52293632,
+      "total_rank_rss_bytes": 51396608,
+      "total_rank_peak_rss_bytes": 52293632,
+      "rank_memory": [
+        {
+          "rss_bytes": 51396608,
+          "peak_rss_bytes": 52293632
+        }
+      ],
+      "verification_errors": [
+        null
+      ]
+    },
+    {
+      "graph_id": "n100_d0p1_seed42",
+      "graph_sha256": "c49535d2ffbf5b9bfb133c819ed0ff762c85b309f19445461d2373cdeabf7be0",
+      "vertices": 100,
+      "density": 0.1,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "main",
+      "mode": "parallel",
+      "processes": 1,
+      "sample_kind": "measured",
+      "repetition": 1,
+      "elapsed_seconds": 0.005288199987262487,
+      "rank_elapsed_seconds": [
+        0.005288199987262487
+      ],
+      "verified": true,
+      "root_rss_bytes": 51646464,
+      "root_peak_rss_bytes": 52293632,
+      "total_rank_rss_bytes": 51646464,
+      "total_rank_peak_rss_bytes": 52293632,
+      "rank_memory": [
+        {
+          "rss_bytes": 51646464,
+          "peak_rss_bytes": 52293632
+        }
+      ],
+      "verification_errors": [
+        null
+      ]
+    },
+    {
+      "graph_id": "n100_d0p1_seed42",
+      "graph_sha256": "c49535d2ffbf5b9bfb133c819ed0ff762c85b309f19445461d2373cdeabf7be0",
+      "vertices": 100,
+      "density": 0.1,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "main",
+      "mode": "parallel",
+      "processes": 1,
+      "sample_kind": "measured",
+      "repetition": 2,
+      "elapsed_seconds": 0.00504050002200529,
+      "rank_elapsed_seconds": [
+        0.00504050002200529
+      ],
+      "verified": true,
+      "root_rss_bytes": 51650560,
+      "root_peak_rss_bytes": 52293632,
+      "total_rank_rss_bytes": 51650560,
+      "total_rank_peak_rss_bytes": 52293632,
+      "rank_memory": [
+        {
+          "rss_bytes": 51650560,
+          "peak_rss_bytes": 52293632
+        }
+      ],
+      "verification_errors": [
+        null
+      ]
+    },
+    {
+      "graph_id": "n100_d0p1_seed42",
+      "graph_sha256": "c49535d2ffbf5b9bfb133c819ed0ff762c85b309f19445461d2373cdeabf7be0",
+      "vertices": 100,
+      "density": 0.1,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "main",
+      "mode": "parallel",
+      "processes": 1,
+      "sample_kind": "measured",
+      "repetition": 3,
+      "elapsed_seconds": 0.004830699996091425,
+      "rank_elapsed_seconds": [
+        0.004830699996091425
+      ],
+      "verified": true,
+      "root_rss_bytes": 51654656,
+      "root_peak_rss_bytes": 52293632,
+      "total_rank_rss_bytes": 51654656,
+      "total_rank_peak_rss_bytes": 52293632,
+      "rank_memory": [
+        {
+          "rss_bytes": 51654656,
+          "peak_rss_bytes": 52293632
+        }
+      ],
+      "verification_errors": [
+        null
+      ]
+    },
+    {
+      "graph_id": "n100_d0p1_seed42",
+      "graph_sha256": "c49535d2ffbf5b9bfb133c819ed0ff762c85b309f19445461d2373cdeabf7be0",
+      "vertices": 100,
+      "density": 0.1,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "main",
+      "mode": "parallel",
+      "processes": 1,
+      "sample_kind": "measured",
+      "repetition": 4,
+      "elapsed_seconds": 0.004968799999915063,
+      "rank_elapsed_seconds": [
+        0.004968799999915063
+      ],
+      "verified": true,
+      "root_rss_bytes": 51785728,
+      "root_peak_rss_bytes": 52293632,
+      "total_rank_rss_bytes": 51785728,
+      "total_rank_peak_rss_bytes": 52293632,
+      "rank_memory": [
+        {
+          "rss_bytes": 51785728,
+          "peak_rss_bytes": 52293632
+        }
+      ],
+      "verification_errors": [
+        null
+      ]
+    },
+    {
+      "graph_id": "n100_d0p1_seed42",
+      "graph_sha256": "c49535d2ffbf5b9bfb133c819ed0ff762c85b309f19445461d2373cdeabf7be0",
+      "vertices": 100,
+      "density": 0.1,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "main",
+      "mode": "parallel",
+      "processes": 1,
+      "sample_kind": "measured",
+      "repetition": 5,
+      "elapsed_seconds": 0.005012699984945357,
+      "rank_elapsed_seconds": [
+        0.005012699984945357
+      ],
+      "verified": true,
+      "root_rss_bytes": 51785728,
+      "root_peak_rss_bytes": 52293632,
+      "total_rank_rss_bytes": 51785728,
+      "total_rank_peak_rss_bytes": 52293632,
+      "rank_memory": [
+        {
+          "rss_bytes": 51785728,
+          "peak_rss_bytes": 52293632
+        }
+      ],
+      "verification_errors": [
+        null
+      ]
+    },
+    {
+      "graph_id": "n500_d0p1_seed42",
+      "graph_sha256": "e439f19f0297995da8dea5115b541cbeb291022f96f5f74d426b4777a701f1ff",
+      "vertices": 500,
+      "density": 0.1,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "main",
+      "mode": "parallel",
+      "processes": 1,
+      "sample_kind": "warmup",
+      "repetition": 1,
+      "elapsed_seconds": 0.11580809997394681,
+      "rank_elapsed_seconds": [
+        0.11580809997394681
+      ],
+      "verified": true,
+      "root_rss_bytes": 54394880,
+      "root_peak_rss_bytes": 60403712,
+      "total_rank_rss_bytes": 54394880,
+      "total_rank_peak_rss_bytes": 60403712,
+      "rank_memory": [
+        {
+          "rss_bytes": 54394880,
+          "peak_rss_bytes": 60403712
+        }
+      ],
+      "verification_errors": [
+        null
+      ]
+    },
+    {
+      "graph_id": "n500_d0p1_seed42",
+      "graph_sha256": "e439f19f0297995da8dea5115b541cbeb291022f96f5f74d426b4777a701f1ff",
+      "vertices": 500,
+      "density": 0.1,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "main",
+      "mode": "parallel",
+      "processes": 1,
+      "sample_kind": "measured",
+      "repetition": 1,
+      "elapsed_seconds": 0.12286459997994825,
+      "rank_elapsed_seconds": [
+        0.12286459997994825
+      ],
+      "verified": true,
+      "root_rss_bytes": 54394880,
+      "root_peak_rss_bytes": 60403712,
+      "total_rank_rss_bytes": 54394880,
+      "total_rank_peak_rss_bytes": 60403712,
+      "rank_memory": [
+        {
+          "rss_bytes": 54394880,
+          "peak_rss_bytes": 60403712
+        }
+      ],
+      "verification_errors": [
+        null
+      ]
+    },
+    {
+      "graph_id": "n500_d0p1_seed42",
+      "graph_sha256": "e439f19f0297995da8dea5115b541cbeb291022f96f5f74d426b4777a701f1ff",
+      "vertices": 500,
+      "density": 0.1,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "main",
+      "mode": "parallel",
+      "processes": 1,
+      "sample_kind": "measured",
+      "repetition": 2,
+      "elapsed_seconds": 0.11991020001005381,
+      "rank_elapsed_seconds": [
+        0.11991020001005381
+      ],
+      "verified": true,
+      "root_rss_bytes": 54398976,
+      "root_peak_rss_bytes": 60407808,
+      "total_rank_rss_bytes": 54398976,
+      "total_rank_peak_rss_bytes": 60407808,
+      "rank_memory": [
+        {
+          "rss_bytes": 54398976,
+          "peak_rss_bytes": 60407808
+        }
+      ],
+      "verification_errors": [
+        null
+      ]
+    },
+    {
+      "graph_id": "n500_d0p1_seed42",
+      "graph_sha256": "e439f19f0297995da8dea5115b541cbeb291022f96f5f74d426b4777a701f1ff",
+      "vertices": 500,
+      "density": 0.1,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "main",
+      "mode": "parallel",
+      "processes": 1,
+      "sample_kind": "measured",
+      "repetition": 3,
+      "elapsed_seconds": 0.1190065000555478,
+      "rank_elapsed_seconds": [
+        0.1190065000555478
+      ],
+      "verified": true,
+      "root_rss_bytes": 54403072,
+      "root_peak_rss_bytes": 60411904,
+      "total_rank_rss_bytes": 54403072,
+      "total_rank_peak_rss_bytes": 60411904,
+      "rank_memory": [
+        {
+          "rss_bytes": 54403072,
+          "peak_rss_bytes": 60411904
+        }
+      ],
+      "verification_errors": [
+        null
+      ]
+    },
+    {
+      "graph_id": "n500_d0p1_seed42",
+      "graph_sha256": "e439f19f0297995da8dea5115b541cbeb291022f96f5f74d426b4777a701f1ff",
+      "vertices": 500,
+      "density": 0.1,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "main",
+      "mode": "parallel",
+      "processes": 1,
+      "sample_kind": "measured",
+      "repetition": 4,
+      "elapsed_seconds": 0.11528610001550987,
+      "rank_elapsed_seconds": [
+        0.11528610001550987
+      ],
+      "verified": true,
+      "root_rss_bytes": 54403072,
+      "root_peak_rss_bytes": 60411904,
+      "total_rank_rss_bytes": 54403072,
+      "total_rank_peak_rss_bytes": 60411904,
+      "rank_memory": [
+        {
+          "rss_bytes": 54403072,
+          "peak_rss_bytes": 60411904
+        }
+      ],
+      "verification_errors": [
+        null
+      ]
+    },
+    {
+      "graph_id": "n500_d0p1_seed42",
+      "graph_sha256": "e439f19f0297995da8dea5115b541cbeb291022f96f5f74d426b4777a701f1ff",
+      "vertices": 500,
+      "density": 0.1,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "main",
+      "mode": "parallel",
+      "processes": 1,
+      "sample_kind": "measured",
+      "repetition": 5,
+      "elapsed_seconds": 0.11870079999789596,
+      "rank_elapsed_seconds": [
+        0.11870079999789596
+      ],
+      "verified": true,
+      "root_rss_bytes": 54403072,
+      "root_peak_rss_bytes": 60411904,
+      "total_rank_rss_bytes": 54403072,
+      "total_rank_peak_rss_bytes": 60411904,
+      "rank_memory": [
+        {
+          "rss_bytes": 54403072,
+          "peak_rss_bytes": 60411904
+        }
+      ],
+      "verification_errors": [
+        null
+      ]
+    },
+    {
+      "graph_id": "n1000_d0p1_seed42",
+      "graph_sha256": "3c516bfef51150a1be4c5437f37dd22410ef5eef6496c39319f2c02fbef19d66",
+      "vertices": 1000,
+      "density": 0.1,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "main",
+      "mode": "parallel",
+      "processes": 1,
+      "sample_kind": "warmup",
+      "repetition": 1,
+      "elapsed_seconds": 0.49018949997844175,
+      "rank_elapsed_seconds": [
+        0.49018949997844175
+      ],
+      "verified": true,
+      "root_rss_bytes": 59453440,
+      "root_peak_rss_bytes": 83435520,
+      "total_rank_rss_bytes": 59453440,
+      "total_rank_peak_rss_bytes": 83435520,
+      "rank_memory": [
+        {
+          "rss_bytes": 59453440,
+          "peak_rss_bytes": 83435520
+        }
+      ],
+      "verification_errors": [
+        null
+      ]
+    },
+    {
+      "graph_id": "n1000_d0p1_seed42",
+      "graph_sha256": "3c516bfef51150a1be4c5437f37dd22410ef5eef6496c39319f2c02fbef19d66",
+      "vertices": 1000,
+      "density": 0.1,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "main",
+      "mode": "parallel",
+      "processes": 1,
+      "sample_kind": "measured",
+      "repetition": 1,
+      "elapsed_seconds": 0.5091481999843381,
+      "rank_elapsed_seconds": [
+        0.5091481999843381
+      ],
+      "verified": true,
+      "root_rss_bytes": 59453440,
+      "root_peak_rss_bytes": 83435520,
+      "total_rank_rss_bytes": 59453440,
+      "total_rank_peak_rss_bytes": 83435520,
+      "rank_memory": [
+        {
+          "rss_bytes": 59453440,
+          "peak_rss_bytes": 83435520
+        }
+      ],
+      "verification_errors": [
+        null
+      ]
+    },
+    {
+      "graph_id": "n1000_d0p1_seed42",
+      "graph_sha256": "3c516bfef51150a1be4c5437f37dd22410ef5eef6496c39319f2c02fbef19d66",
+      "vertices": 1000,
+      "density": 0.1,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "main",
+      "mode": "parallel",
+      "processes": 1,
+      "sample_kind": "measured",
+      "repetition": 2,
+      "elapsed_seconds": 0.4716490000137128,
+      "rank_elapsed_seconds": [
+        0.4716490000137128
+      ],
+      "verified": true,
+      "root_rss_bytes": 59453440,
+      "root_peak_rss_bytes": 83435520,
+      "total_rank_rss_bytes": 59453440,
+      "total_rank_peak_rss_bytes": 83435520,
+      "rank_memory": [
+        {
+          "rss_bytes": 59453440,
+          "peak_rss_bytes": 83435520
+        }
+      ],
+      "verification_errors": [
+        null
+      ]
+    },
+    {
+      "graph_id": "n1000_d0p1_seed42",
+      "graph_sha256": "3c516bfef51150a1be4c5437f37dd22410ef5eef6496c39319f2c02fbef19d66",
+      "vertices": 1000,
+      "density": 0.1,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "main",
+      "mode": "parallel",
+      "processes": 1,
+      "sample_kind": "measured",
+      "repetition": 3,
+      "elapsed_seconds": 0.47252949996618554,
+      "rank_elapsed_seconds": [
+        0.47252949996618554
+      ],
+      "verified": true,
+      "root_rss_bytes": 59453440,
+      "root_peak_rss_bytes": 83435520,
+      "total_rank_rss_bytes": 59453440,
+      "total_rank_peak_rss_bytes": 83435520,
+      "rank_memory": [
+        {
+          "rss_bytes": 59453440,
+          "peak_rss_bytes": 83435520
+        }
+      ],
+      "verification_errors": [
+        null
+      ]
+    },
+    {
+      "graph_id": "n1000_d0p1_seed42",
+      "graph_sha256": "3c516bfef51150a1be4c5437f37dd22410ef5eef6496c39319f2c02fbef19d66",
+      "vertices": 1000,
+      "density": 0.1,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "main",
+      "mode": "parallel",
+      "processes": 1,
+      "sample_kind": "measured",
+      "repetition": 4,
+      "elapsed_seconds": 0.4654244999983348,
+      "rank_elapsed_seconds": [
+        0.4654244999983348
+      ],
+      "verified": true,
+      "root_rss_bytes": 59453440,
+      "root_peak_rss_bytes": 83435520,
+      "total_rank_rss_bytes": 59453440,
+      "total_rank_peak_rss_bytes": 83435520,
+      "rank_memory": [
+        {
+          "rss_bytes": 59453440,
+          "peak_rss_bytes": 83435520
+        }
+      ],
+      "verification_errors": [
+        null
+      ]
+    },
+    {
+      "graph_id": "n1000_d0p1_seed42",
+      "graph_sha256": "3c516bfef51150a1be4c5437f37dd22410ef5eef6496c39319f2c02fbef19d66",
+      "vertices": 1000,
+      "density": 0.1,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "main",
+      "mode": "parallel",
+      "processes": 1,
+      "sample_kind": "measured",
+      "repetition": 5,
+      "elapsed_seconds": 0.4647403000271879,
+      "rank_elapsed_seconds": [
+        0.4647403000271879
+      ],
+      "verified": true,
+      "root_rss_bytes": 59453440,
+      "root_peak_rss_bytes": 83435520,
+      "total_rank_rss_bytes": 59453440,
+      "total_rank_peak_rss_bytes": 83435520,
+      "rank_memory": [
+        {
+          "rss_bytes": 59453440,
+          "peak_rss_bytes": 83435520
+        }
+      ],
+      "verification_errors": [
+        null
+      ]
+    },
+    {
+      "graph_id": "n2000_d0p1_seed42",
+      "graph_sha256": "88b4f4a3c78043db6cf86f6d338f270171fabd77ee437ed08708fa4a95c578b8",
+      "vertices": 2000,
+      "density": 0.1,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "main",
+      "mode": "parallel",
+      "processes": 1,
+      "sample_kind": "warmup",
+      "repetition": 1,
+      "elapsed_seconds": 1.863267700013239,
+      "rank_elapsed_seconds": [
+        1.863267700013239
+      ],
+      "verified": true,
+      "root_rss_bytes": 83722240,
+      "root_peak_rss_bytes": 179728384,
+      "total_rank_rss_bytes": 83722240,
+      "total_rank_peak_rss_bytes": 179728384,
+      "rank_memory": [
+        {
+          "rss_bytes": 83722240,
+          "peak_rss_bytes": 179728384
+        }
+      ],
+      "verification_errors": [
+        null
+      ]
+    },
+    {
+      "graph_id": "n2000_d0p1_seed42",
+      "graph_sha256": "88b4f4a3c78043db6cf86f6d338f270171fabd77ee437ed08708fa4a95c578b8",
+      "vertices": 2000,
+      "density": 0.1,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "main",
+      "mode": "parallel",
+      "processes": 1,
+      "sample_kind": "measured",
+      "repetition": 1,
+      "elapsed_seconds": 1.891251499997452,
+      "rank_elapsed_seconds": [
+        1.891251499997452
+      ],
+      "verified": true,
+      "root_rss_bytes": 83722240,
+      "root_peak_rss_bytes": 179728384,
+      "total_rank_rss_bytes": 83722240,
+      "total_rank_peak_rss_bytes": 179728384,
+      "rank_memory": [
+        {
+          "rss_bytes": 83722240,
+          "peak_rss_bytes": 179728384
+        }
+      ],
+      "verification_errors": [
+        null
+      ]
+    },
+    {
+      "graph_id": "n2000_d0p1_seed42",
+      "graph_sha256": "88b4f4a3c78043db6cf86f6d338f270171fabd77ee437ed08708fa4a95c578b8",
+      "vertices": 2000,
+      "density": 0.1,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "main",
+      "mode": "parallel",
+      "processes": 1,
+      "sample_kind": "measured",
+      "repetition": 2,
+      "elapsed_seconds": 1.8975359000032768,
+      "rank_elapsed_seconds": [
+        1.8975359000032768
+      ],
+      "verified": true,
+      "root_rss_bytes": 83722240,
+      "root_peak_rss_bytes": 179728384,
+      "total_rank_rss_bytes": 83722240,
+      "total_rank_peak_rss_bytes": 179728384,
+      "rank_memory": [
+        {
+          "rss_bytes": 83722240,
+          "peak_rss_bytes": 179728384
+        }
+      ],
+      "verification_errors": [
+        null
+      ]
+    },
+    {
+      "graph_id": "n2000_d0p1_seed42",
+      "graph_sha256": "88b4f4a3c78043db6cf86f6d338f270171fabd77ee437ed08708fa4a95c578b8",
+      "vertices": 2000,
+      "density": 0.1,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "main",
+      "mode": "parallel",
+      "processes": 1,
+      "sample_kind": "measured",
+      "repetition": 3,
+      "elapsed_seconds": 1.9462270000367425,
+      "rank_elapsed_seconds": [
+        1.9462270000367425
+      ],
+      "verified": true,
+      "root_rss_bytes": 83722240,
+      "root_peak_rss_bytes": 179728384,
+      "total_rank_rss_bytes": 83722240,
+      "total_rank_peak_rss_bytes": 179728384,
+      "rank_memory": [
+        {
+          "rss_bytes": 83722240,
+          "peak_rss_bytes": 179728384
+        }
+      ],
+      "verification_errors": [
+        null
+      ]
+    },
+    {
+      "graph_id": "n2000_d0p1_seed42",
+      "graph_sha256": "88b4f4a3c78043db6cf86f6d338f270171fabd77ee437ed08708fa4a95c578b8",
+      "vertices": 2000,
+      "density": 0.1,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "main",
+      "mode": "parallel",
+      "processes": 1,
+      "sample_kind": "measured",
+      "repetition": 4,
+      "elapsed_seconds": 1.8451258000568487,
+      "rank_elapsed_seconds": [
+        1.8451258000568487
+      ],
+      "verified": true,
+      "root_rss_bytes": 83722240,
+      "root_peak_rss_bytes": 179728384,
+      "total_rank_rss_bytes": 83722240,
+      "total_rank_peak_rss_bytes": 179728384,
+      "rank_memory": [
+        {
+          "rss_bytes": 83722240,
+          "peak_rss_bytes": 179728384
+        }
+      ],
+      "verification_errors": [
+        null
+      ]
+    },
+    {
+      "graph_id": "n2000_d0p1_seed42",
+      "graph_sha256": "88b4f4a3c78043db6cf86f6d338f270171fabd77ee437ed08708fa4a95c578b8",
+      "vertices": 2000,
+      "density": 0.1,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "main",
+      "mode": "parallel",
+      "processes": 1,
+      "sample_kind": "measured",
+      "repetition": 5,
+      "elapsed_seconds": 1.824425600003451,
+      "rank_elapsed_seconds": [
+        1.824425600003451
+      ],
+      "verified": true,
+      "root_rss_bytes": 83722240,
+      "root_peak_rss_bytes": 179728384,
+      "total_rank_rss_bytes": 83722240,
+      "total_rank_peak_rss_bytes": 179728384,
+      "rank_memory": [
+        {
+          "rss_bytes": 83722240,
+          "peak_rss_bytes": 179728384
+        }
+      ],
+      "verification_errors": [
+        null
+      ]
+    },
+    {
+      "graph_id": "n100_d0p5_seed42",
+      "graph_sha256": "2aff56f794b0206617775f420af85f86f9c078fff72a1e2d5fc7bfe333ab6885",
+      "vertices": 100,
+      "density": 0.5,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "main",
+      "mode": "parallel",
+      "processes": 1,
+      "sample_kind": "warmup",
+      "repetition": 1,
+      "elapsed_seconds": 0.006154500006232411,
+      "rank_elapsed_seconds": [
+        0.006154500006232411
+      ],
+      "verified": true,
+      "root_rss_bytes": 51847168,
+      "root_peak_rss_bytes": 179728384,
+      "total_rank_rss_bytes": 51847168,
+      "total_rank_peak_rss_bytes": 179728384,
+      "rank_memory": [
+        {
+          "rss_bytes": 51847168,
+          "peak_rss_bytes": 179728384
+        }
+      ],
+      "verification_errors": [
+        null
+      ]
+    },
+    {
+      "graph_id": "n100_d0p5_seed42",
+      "graph_sha256": "2aff56f794b0206617775f420af85f86f9c078fff72a1e2d5fc7bfe333ab6885",
+      "vertices": 100,
+      "density": 0.5,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "main",
+      "mode": "parallel",
+      "processes": 1,
+      "sample_kind": "measured",
+      "repetition": 1,
+      "elapsed_seconds": 0.006315900012850761,
+      "rank_elapsed_seconds": [
+        0.006315900012850761
+      ],
+      "verified": true,
+      "root_rss_bytes": 51851264,
+      "root_peak_rss_bytes": 179728384,
+      "total_rank_rss_bytes": 51851264,
+      "total_rank_peak_rss_bytes": 179728384,
+      "rank_memory": [
+        {
+          "rss_bytes": 51851264,
+          "peak_rss_bytes": 179728384
+        }
+      ],
+      "verification_errors": [
+        null
+      ]
+    },
+    {
+      "graph_id": "n100_d0p5_seed42",
+      "graph_sha256": "2aff56f794b0206617775f420af85f86f9c078fff72a1e2d5fc7bfe333ab6885",
+      "vertices": 100,
+      "density": 0.5,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "main",
+      "mode": "parallel",
+      "processes": 1,
+      "sample_kind": "measured",
+      "repetition": 2,
+      "elapsed_seconds": 0.00595149997388944,
+      "rank_elapsed_seconds": [
+        0.00595149997388944
+      ],
+      "verified": true,
+      "root_rss_bytes": 51851264,
+      "root_peak_rss_bytes": 179728384,
+      "total_rank_rss_bytes": 51851264,
+      "total_rank_peak_rss_bytes": 179728384,
+      "rank_memory": [
+        {
+          "rss_bytes": 51851264,
+          "peak_rss_bytes": 179728384
+        }
+      ],
+      "verification_errors": [
+        null
+      ]
+    },
+    {
+      "graph_id": "n100_d0p5_seed42",
+      "graph_sha256": "2aff56f794b0206617775f420af85f86f9c078fff72a1e2d5fc7bfe333ab6885",
+      "vertices": 100,
+      "density": 0.5,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "main",
+      "mode": "parallel",
+      "processes": 1,
+      "sample_kind": "measured",
+      "repetition": 3,
+      "elapsed_seconds": 0.006214799999725074,
+      "rank_elapsed_seconds": [
+        0.006214799999725074
+      ],
+      "verified": true,
+      "root_rss_bytes": 51851264,
+      "root_peak_rss_bytes": 179728384,
+      "total_rank_rss_bytes": 51851264,
+      "total_rank_peak_rss_bytes": 179728384,
+      "rank_memory": [
+        {
+          "rss_bytes": 51851264,
+          "peak_rss_bytes": 179728384
+        }
+      ],
+      "verification_errors": [
+        null
+      ]
+    },
+    {
+      "graph_id": "n100_d0p5_seed42",
+      "graph_sha256": "2aff56f794b0206617775f420af85f86f9c078fff72a1e2d5fc7bfe333ab6885",
+      "vertices": 100,
+      "density": 0.5,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "main",
+      "mode": "parallel",
+      "processes": 1,
+      "sample_kind": "measured",
+      "repetition": 4,
+      "elapsed_seconds": 0.006384900014381856,
+      "rank_elapsed_seconds": [
+        0.006384900014381856
+      ],
+      "verified": true,
+      "root_rss_bytes": 51855360,
+      "root_peak_rss_bytes": 179728384,
+      "total_rank_rss_bytes": 51855360,
+      "total_rank_peak_rss_bytes": 179728384,
+      "rank_memory": [
+        {
+          "rss_bytes": 51855360,
+          "peak_rss_bytes": 179728384
+        }
+      ],
+      "verification_errors": [
+        null
+      ]
+    },
+    {
+      "graph_id": "n100_d0p5_seed42",
+      "graph_sha256": "2aff56f794b0206617775f420af85f86f9c078fff72a1e2d5fc7bfe333ab6885",
+      "vertices": 100,
+      "density": 0.5,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "main",
+      "mode": "parallel",
+      "processes": 1,
+      "sample_kind": "measured",
+      "repetition": 5,
+      "elapsed_seconds": 0.006218500027898699,
+      "rank_elapsed_seconds": [
+        0.006218500027898699
+      ],
+      "verified": true,
+      "root_rss_bytes": 51855360,
+      "root_peak_rss_bytes": 179728384,
+      "total_rank_rss_bytes": 51855360,
+      "total_rank_peak_rss_bytes": 179728384,
+      "rank_memory": [
+        {
+          "rss_bytes": 51855360,
+          "peak_rss_bytes": 179728384
+        }
+      ],
+      "verification_errors": [
+        null
+      ]
+    },
+    {
+      "graph_id": "n500_d0p5_seed42",
+      "graph_sha256": "2a8f44322a1e7717f73c8181f437d26e22231dfce041aeaf712a006cb8abe948",
+      "vertices": 500,
+      "density": 0.5,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "main",
+      "mode": "parallel",
+      "processes": 1,
+      "sample_kind": "warmup",
+      "repetition": 1,
+      "elapsed_seconds": 0.1465885000070557,
+      "rank_elapsed_seconds": [
+        0.1465885000070557
+      ],
+      "verified": true,
+      "root_rss_bytes": 54210560,
+      "root_peak_rss_bytes": 179728384,
+      "total_rank_rss_bytes": 54210560,
+      "total_rank_peak_rss_bytes": 179728384,
+      "rank_memory": [
+        {
+          "rss_bytes": 54210560,
+          "peak_rss_bytes": 179728384
+        }
+      ],
+      "verification_errors": [
+        null
+      ]
+    },
+    {
+      "graph_id": "n500_d0p5_seed42",
+      "graph_sha256": "2a8f44322a1e7717f73c8181f437d26e22231dfce041aeaf712a006cb8abe948",
+      "vertices": 500,
+      "density": 0.5,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "main",
+      "mode": "parallel",
+      "processes": 1,
+      "sample_kind": "measured",
+      "repetition": 1,
+      "elapsed_seconds": 0.14565570000559092,
+      "rank_elapsed_seconds": [
+        0.14565570000559092
+      ],
+      "verified": true,
+      "root_rss_bytes": 54337536,
+      "root_peak_rss_bytes": 179728384,
+      "total_rank_rss_bytes": 54337536,
+      "total_rank_peak_rss_bytes": 179728384,
+      "rank_memory": [
+        {
+          "rss_bytes": 54337536,
+          "peak_rss_bytes": 179728384
+        }
+      ],
+      "verification_errors": [
+        null
+      ]
+    },
+    {
+      "graph_id": "n500_d0p5_seed42",
+      "graph_sha256": "2a8f44322a1e7717f73c8181f437d26e22231dfce041aeaf712a006cb8abe948",
+      "vertices": 500,
+      "density": 0.5,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "main",
+      "mode": "parallel",
+      "processes": 1,
+      "sample_kind": "measured",
+      "repetition": 2,
+      "elapsed_seconds": 0.14290680002886802,
+      "rank_elapsed_seconds": [
+        0.14290680002886802
+      ],
+      "verified": true,
+      "root_rss_bytes": 54341632,
+      "root_peak_rss_bytes": 179728384,
+      "total_rank_rss_bytes": 54341632,
+      "total_rank_peak_rss_bytes": 179728384,
+      "rank_memory": [
+        {
+          "rss_bytes": 54341632,
+          "peak_rss_bytes": 179728384
+        }
+      ],
+      "verification_errors": [
+        null
+      ]
+    },
+    {
+      "graph_id": "n500_d0p5_seed42",
+      "graph_sha256": "2a8f44322a1e7717f73c8181f437d26e22231dfce041aeaf712a006cb8abe948",
+      "vertices": 500,
+      "density": 0.5,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "main",
+      "mode": "parallel",
+      "processes": 1,
+      "sample_kind": "measured",
+      "repetition": 3,
+      "elapsed_seconds": 0.1434239000082016,
+      "rank_elapsed_seconds": [
+        0.1434239000082016
+      ],
+      "verified": true,
+      "root_rss_bytes": 54341632,
+      "root_peak_rss_bytes": 179728384,
+      "total_rank_rss_bytes": 54341632,
+      "total_rank_peak_rss_bytes": 179728384,
+      "rank_memory": [
+        {
+          "rss_bytes": 54341632,
+          "peak_rss_bytes": 179728384
+        }
+      ],
+      "verification_errors": [
+        null
+      ]
+    },
+    {
+      "graph_id": "n500_d0p5_seed42",
+      "graph_sha256": "2a8f44322a1e7717f73c8181f437d26e22231dfce041aeaf712a006cb8abe948",
+      "vertices": 500,
+      "density": 0.5,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "main",
+      "mode": "parallel",
+      "processes": 1,
+      "sample_kind": "measured",
+      "repetition": 4,
+      "elapsed_seconds": 0.14326010004151613,
+      "rank_elapsed_seconds": [
+        0.14326010004151613
+      ],
+      "verified": true,
+      "root_rss_bytes": 54341632,
+      "root_peak_rss_bytes": 179728384,
+      "total_rank_rss_bytes": 54341632,
+      "total_rank_peak_rss_bytes": 179728384,
+      "rank_memory": [
+        {
+          "rss_bytes": 54341632,
+          "peak_rss_bytes": 179728384
+        }
+      ],
+      "verification_errors": [
+        null
+      ]
+    },
+    {
+      "graph_id": "n500_d0p5_seed42",
+      "graph_sha256": "2a8f44322a1e7717f73c8181f437d26e22231dfce041aeaf712a006cb8abe948",
+      "vertices": 500,
+      "density": 0.5,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "main",
+      "mode": "parallel",
+      "processes": 1,
+      "sample_kind": "measured",
+      "repetition": 5,
+      "elapsed_seconds": 0.14125779998721555,
+      "rank_elapsed_seconds": [
+        0.14125779998721555
+      ],
+      "verified": true,
+      "root_rss_bytes": 54349824,
+      "root_peak_rss_bytes": 179728384,
+      "total_rank_rss_bytes": 54349824,
+      "total_rank_peak_rss_bytes": 179728384,
+      "rank_memory": [
+        {
+          "rss_bytes": 54349824,
+          "peak_rss_bytes": 179728384
+        }
+      ],
+      "verification_errors": [
+        null
+      ]
+    },
+    {
+      "graph_id": "n1000_d0p5_seed42",
+      "graph_sha256": "9c7b38403171d5c25dc42b24ddb04b23faf447d99ab834a8e3971f6871dc522d",
+      "vertices": 1000,
+      "density": 0.5,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "main",
+      "mode": "parallel",
+      "processes": 1,
+      "sample_kind": "warmup",
+      "repetition": 1,
+      "elapsed_seconds": 0.5800936999730766,
+      "rank_elapsed_seconds": [
+        0.5800936999730766
+      ],
+      "verified": true,
+      "root_rss_bytes": 59498496,
+      "root_peak_rss_bytes": 179728384,
+      "total_rank_rss_bytes": 59498496,
+      "total_rank_peak_rss_bytes": 179728384,
+      "rank_memory": [
+        {
+          "rss_bytes": 59498496,
+          "peak_rss_bytes": 179728384
+        }
+      ],
+      "verification_errors": [
+        null
+      ]
+    },
+    {
+      "graph_id": "n1000_d0p5_seed42",
+      "graph_sha256": "9c7b38403171d5c25dc42b24ddb04b23faf447d99ab834a8e3971f6871dc522d",
+      "vertices": 1000,
+      "density": 0.5,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "main",
+      "mode": "parallel",
+      "processes": 1,
+      "sample_kind": "measured",
+      "repetition": 1,
+      "elapsed_seconds": 0.5676336999749765,
+      "rank_elapsed_seconds": [
+        0.5676336999749765
+      ],
+      "verified": true,
+      "root_rss_bytes": 59498496,
+      "root_peak_rss_bytes": 179728384,
+      "total_rank_rss_bytes": 59498496,
+      "total_rank_peak_rss_bytes": 179728384,
+      "rank_memory": [
+        {
+          "rss_bytes": 59498496,
+          "peak_rss_bytes": 179728384
+        }
+      ],
+      "verification_errors": [
+        null
+      ]
+    },
+    {
+      "graph_id": "n1000_d0p5_seed42",
+      "graph_sha256": "9c7b38403171d5c25dc42b24ddb04b23faf447d99ab834a8e3971f6871dc522d",
+      "vertices": 1000,
+      "density": 0.5,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "main",
+      "mode": "parallel",
+      "processes": 1,
+      "sample_kind": "measured",
+      "repetition": 2,
+      "elapsed_seconds": 0.5759727999684401,
+      "rank_elapsed_seconds": [
+        0.5759727999684401
+      ],
+      "verified": true,
+      "root_rss_bytes": 59502592,
+      "root_peak_rss_bytes": 179728384,
+      "total_rank_rss_bytes": 59502592,
+      "total_rank_peak_rss_bytes": 179728384,
+      "rank_memory": [
+        {
+          "rss_bytes": 59502592,
+          "peak_rss_bytes": 179728384
+        }
+      ],
+      "verification_errors": [
+        null
+      ]
+    },
+    {
+      "graph_id": "n1000_d0p5_seed42",
+      "graph_sha256": "9c7b38403171d5c25dc42b24ddb04b23faf447d99ab834a8e3971f6871dc522d",
+      "vertices": 1000,
+      "density": 0.5,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "main",
+      "mode": "parallel",
+      "processes": 1,
+      "sample_kind": "measured",
+      "repetition": 3,
+      "elapsed_seconds": 0.6339004000183195,
+      "rank_elapsed_seconds": [
+        0.6339004000183195
+      ],
+      "verified": true,
+      "root_rss_bytes": 59506688,
+      "root_peak_rss_bytes": 179728384,
+      "total_rank_rss_bytes": 59506688,
+      "total_rank_peak_rss_bytes": 179728384,
+      "rank_memory": [
+        {
+          "rss_bytes": 59506688,
+          "peak_rss_bytes": 179728384
+        }
+      ],
+      "verification_errors": [
+        null
+      ]
+    },
+    {
+      "graph_id": "n1000_d0p5_seed42",
+      "graph_sha256": "9c7b38403171d5c25dc42b24ddb04b23faf447d99ab834a8e3971f6871dc522d",
+      "vertices": 1000,
+      "density": 0.5,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "main",
+      "mode": "parallel",
+      "processes": 1,
+      "sample_kind": "measured",
+      "repetition": 4,
+      "elapsed_seconds": 0.6211079999920912,
+      "rank_elapsed_seconds": [
+        0.6211079999920912
+      ],
+      "verified": true,
+      "root_rss_bytes": 59506688,
+      "root_peak_rss_bytes": 179728384,
+      "total_rank_rss_bytes": 59506688,
+      "total_rank_peak_rss_bytes": 179728384,
+      "rank_memory": [
+        {
+          "rss_bytes": 59506688,
+          "peak_rss_bytes": 179728384
+        }
+      ],
+      "verification_errors": [
+        null
+      ]
+    },
+    {
+      "graph_id": "n1000_d0p5_seed42",
+      "graph_sha256": "9c7b38403171d5c25dc42b24ddb04b23faf447d99ab834a8e3971f6871dc522d",
+      "vertices": 1000,
+      "density": 0.5,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "main",
+      "mode": "parallel",
+      "processes": 1,
+      "sample_kind": "measured",
+      "repetition": 5,
+      "elapsed_seconds": 0.5785848000086844,
+      "rank_elapsed_seconds": [
+        0.5785848000086844
+      ],
+      "verified": true,
+      "root_rss_bytes": 59506688,
+      "root_peak_rss_bytes": 179728384,
+      "total_rank_rss_bytes": 59506688,
+      "total_rank_peak_rss_bytes": 179728384,
+      "rank_memory": [
+        {
+          "rss_bytes": 59506688,
+          "peak_rss_bytes": 179728384
+        }
+      ],
+      "verification_errors": [
+        null
+      ]
+    },
+    {
+      "graph_id": "n2000_d0p5_seed42",
+      "graph_sha256": "05764b8d2942cb4ec64a9028ed55b1b4821eb9f031348e51fb7c6e12b2ba4156",
+      "vertices": 2000,
+      "density": 0.5,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "main",
+      "mode": "parallel",
+      "processes": 1,
+      "sample_kind": "warmup",
+      "repetition": 1,
+      "elapsed_seconds": 2.2995448999572545,
+      "rank_elapsed_seconds": [
+        2.2995448999572545
+      ],
+      "verified": true,
+      "root_rss_bytes": 83808256,
+      "root_peak_rss_bytes": 179814400,
+      "total_rank_rss_bytes": 83808256,
+      "total_rank_peak_rss_bytes": 179814400,
+      "rank_memory": [
+        {
+          "rss_bytes": 83808256,
+          "peak_rss_bytes": 179814400
+        }
+      ],
+      "verification_errors": [
+        null
+      ]
+    },
+    {
+      "graph_id": "n2000_d0p5_seed42",
+      "graph_sha256": "05764b8d2942cb4ec64a9028ed55b1b4821eb9f031348e51fb7c6e12b2ba4156",
+      "vertices": 2000,
+      "density": 0.5,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "main",
+      "mode": "parallel",
+      "processes": 1,
+      "sample_kind": "measured",
+      "repetition": 1,
+      "elapsed_seconds": 2.2690324000432156,
+      "rank_elapsed_seconds": [
+        2.2690324000432156
+      ],
+      "verified": true,
+      "root_rss_bytes": 83853312,
+      "root_peak_rss_bytes": 179859456,
+      "total_rank_rss_bytes": 83853312,
+      "total_rank_peak_rss_bytes": 179859456,
+      "rank_memory": [
+        {
+          "rss_bytes": 83853312,
+          "peak_rss_bytes": 179859456
+        }
+      ],
+      "verification_errors": [
+        null
+      ]
+    },
+    {
+      "graph_id": "n2000_d0p5_seed42",
+      "graph_sha256": "05764b8d2942cb4ec64a9028ed55b1b4821eb9f031348e51fb7c6e12b2ba4156",
+      "vertices": 2000,
+      "density": 0.5,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "main",
+      "mode": "parallel",
+      "processes": 1,
+      "sample_kind": "measured",
+      "repetition": 2,
+      "elapsed_seconds": 2.3924064000020735,
+      "rank_elapsed_seconds": [
+        2.3924064000020735
+      ],
+      "verified": true,
+      "root_rss_bytes": 83861504,
+      "root_peak_rss_bytes": 179867648,
+      "total_rank_rss_bytes": 83861504,
+      "total_rank_peak_rss_bytes": 179867648,
+      "rank_memory": [
+        {
+          "rss_bytes": 83861504,
+          "peak_rss_bytes": 179867648
+        }
+      ],
+      "verification_errors": [
+        null
+      ]
+    },
+    {
+      "graph_id": "n2000_d0p5_seed42",
+      "graph_sha256": "05764b8d2942cb4ec64a9028ed55b1b4821eb9f031348e51fb7c6e12b2ba4156",
+      "vertices": 2000,
+      "density": 0.5,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "main",
+      "mode": "parallel",
+      "processes": 1,
+      "sample_kind": "measured",
+      "repetition": 3,
+      "elapsed_seconds": 2.3187149000004865,
+      "rank_elapsed_seconds": [
+        2.3187149000004865
+      ],
+      "verified": true,
+      "root_rss_bytes": 83865600,
+      "root_peak_rss_bytes": 179871744,
+      "total_rank_rss_bytes": 83865600,
+      "total_rank_peak_rss_bytes": 179871744,
+      "rank_memory": [
+        {
+          "rss_bytes": 83865600,
+          "peak_rss_bytes": 179871744
+        }
+      ],
+      "verification_errors": [
+        null
+      ]
+    },
+    {
+      "graph_id": "n2000_d0p5_seed42",
+      "graph_sha256": "05764b8d2942cb4ec64a9028ed55b1b4821eb9f031348e51fb7c6e12b2ba4156",
+      "vertices": 2000,
+      "density": 0.5,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "main",
+      "mode": "parallel",
+      "processes": 1,
+      "sample_kind": "measured",
+      "repetition": 4,
+      "elapsed_seconds": 2.2885513000073843,
+      "rank_elapsed_seconds": [
+        2.2885513000073843
+      ],
+      "verified": true,
+      "root_rss_bytes": 83869696,
+      "root_peak_rss_bytes": 179871744,
+      "total_rank_rss_bytes": 83869696,
+      "total_rank_peak_rss_bytes": 179871744,
+      "rank_memory": [
+        {
+          "rss_bytes": 83869696,
+          "peak_rss_bytes": 179871744
+        }
+      ],
+      "verification_errors": [
+        null
+      ]
+    },
+    {
+      "graph_id": "n2000_d0p5_seed42",
+      "graph_sha256": "05764b8d2942cb4ec64a9028ed55b1b4821eb9f031348e51fb7c6e12b2ba4156",
+      "vertices": 2000,
+      "density": 0.5,
+      "max_weight": 1000,
+      "seed": 42,
+      "directed": false,
+      "phase": "main",
+      "mode": "parallel",
+      "processes": 1,
+      "sample_kind": "measured",
+      "repetition": 5,
+      "elapsed_seconds": 2.275517400004901,
+      "rank_elapsed_seconds": [
+        2.275517400004901
+      ],
+      "verified": true,
+      "root_rss_bytes": 83869696,
+      "root_peak_rss_bytes": 179875840,
+      "total_rank_rss_bytes": 83869696,
+      "total_rank_peak_rss_bytes": 179875840,
+      "rank_memory": [
+        {
+          "rss_bytes": 83869696,
+          "peak_rss_bytes": 179875840
+        }
+      ],
+      "verification_errors": [
+        null
+      ]
+    }
+  ],
+  "final_ranks": [
+    {
+      "rank": 0,
+      "pid": 13448,
+      "processor_name": "SHENRON",
+      "affinity_logical_cpu_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "environment": {
+        "FI_PROVIDER_PATH": "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Library\\bin",
+        "HYDRA_BSTRAP_DEBUG": "0",
+        "HYDRA_BSTRAP_DOWNSTREAM_STDIN": "-1",
+        "HYDRA_BSTRAP_LAUNCHER": "powershell",
+        "HYDRA_BSTRAP_LOCALHOST": "SHENRON",
+        "HYDRA_BSTRAP_NODE_ID": "0",
+        "HYDRA_BSTRAP_NUM_DOWNSTREAM_PROXIES": "0",
+        "HYDRA_BSTRAP_NUM_LAUNCHES": "-1",
+        "HYDRA_BSTRAP_PGID": "0",
+        "HYDRA_BSTRAP_PROXY_ID": "0",
+        "HYDRA_BSTRAP_SUBTREE_SIZE": "1",
+        "HYDRA_BSTRAP_TREE_WIDTH": "1",
+        "HYDRA_BSTRAP_UPSTREAM_FD": "348",
+        "HYDRA_IP_VERSION": "2",
+        "HYDRA_LAUNCH_TYPE": "2",
+        "I_MPI_HYDRA_TOPOLIB": "ipl2",
+        "I_MPI_HYDRA_UUID": "18600000-f051-9893-0000-0000f1300000",
+        "I_MPI_INFO_BRAND": "Intel(R) Core(TM) i7-14650HX",
+        "I_MPI_INFO_CACHE1": "0,0,4,4,8,8,12,12,16,16,20,20,24,24,28,28,32,33,34,35,36,37,38,39",
+        "I_MPI_INFO_CACHE2": "0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,8,8,9,9,9,9",
+        "I_MPI_INFO_CACHE3": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+        "I_MPI_INFO_CACHES": "3",
+        "I_MPI_INFO_CACHE_SHARE": "2,8,128",
+        "I_MPI_INFO_CACHE_SIZE": "49152,2097152,31457280",
+        "I_MPI_INFO_CORE": "0,0,4,4,8,8,12,12,16,16,20,20,24,24,28,28,32,33,34,35,36,37,38,39",
+        "I_MPI_INFO_C_NAME": "Unknown",
+        "I_MPI_INFO_DESC": "654311424",
+        "I_MPI_INFO_FLGB": "597436329",
+        "I_MPI_INFO_FLGC": "-330869",
+        "I_MPI_INFO_FLGCEXT": "406849444",
+        "I_MPI_INFO_FLGD": "-1077150721",
+        "I_MPI_INFO_FLGDEXT": "-1139227632",
+        "I_MPI_INFO_LCPU": "24",
+        "I_MPI_INFO_MODE": "775",
+        "I_MPI_INFO_NC": "16",
+        "I_MPI_INFO_NP": "1",
+        "I_MPI_INFO_PACK": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+        "I_MPI_INFO_SERIAL": "0000",
+        "I_MPI_INFO_SIGN": "722545",
+        "I_MPI_INFO_STATE": "0",
+        "I_MPI_INFO_THREAD": "0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,0,0,0,0,0,0,0",
+        "I_MPI_INFO_VEND": "1",
+        "I_MPI_PIN": "0",
+        "I_MPI_PIN_INFO": "0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23",
+        "I_MPI_PIN_MAPPING": "1:0 0",
+        "MKL_NUM_THREADS": "1",
+        "MPI_LOCALNRANKS": "1",
+        "MPI_LOCALRANKID": "0",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "PMI_FD": "300",
+        "PMI_RANK": "0",
+        "PMI_SIZE": "1"
+      },
+      "python_executable": "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Scripts\\python.exe",
+      "python_version": "3.14.3",
+      "python_architecture_bits": 64,
+      "numpy_version": "2.5.4",
+      "mpi4py_version": "4.1.2",
+      "psutil_version": "7.2.2",
+      "mpi_vendor": [
+        "Intel MPI",
+        [
+          2021,
+          18,
+          1
+        ]
+      ],
+      "mpi_library_version": "Intel(R) MPI Library 2021.18.1 for Windows* OS",
+      "mpi_wtick_seconds": -1.0,
+      "memory": {
+        "rss_bytes": 51879936,
+        "peak_rss_bytes": 179875840
+      }
+    }
+  ]
+}

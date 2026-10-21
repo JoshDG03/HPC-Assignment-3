@@ -1,0 +1,8 @@
+main parallel p=1 n100_d0p1_seed42: 5 verified repetitions, 0.004831..0.005288 s; root RSS=49.4 MiB
+main parallel p=1 n500_d0p1_seed42: 5 verified repetitions, 0.115286..0.122865 s; root RSS=51.9 MiB
+main parallel p=1 n1000_d0p1_seed42: 5 verified repetitions, 0.464740..0.509148 s; root RSS=56.7 MiB
+main parallel p=1 n2000_d0p1_seed42: 5 verified repetitions, 1.824426..1.946227 s; root RSS=79.8 MiB
+main parallel p=1 n100_d0p5_seed42: 5 verified repetitions, 0.005951..0.006385 s; root RSS=49.5 MiB
+main parallel p=1 n500_d0p5_seed42: 5 verified repetitions, 0.141258..0.145656 s; root RSS=51.8 MiB
+main parallel p=1 n1000_d0p5_seed42: 5 verified repetitions, 0.567634..0.633900 s; root RSS=56.8 MiB
+main parallel p=1 n2000_d0p5_seed42: 5 verified repetitions, 2.269032..2.392406 s; root RSS=80.0 MiB

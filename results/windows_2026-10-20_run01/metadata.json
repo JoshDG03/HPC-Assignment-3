@@ -1,0 +1,1298 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "created_utc": "2026-10-21T01:38:24.741510+00:00",
+  "client_timezone": "America/La_Paz",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "hardware": {
+    "operating_system": {
+      "Caption": "Microsoft Windows 11 Home",
+      "Version": "10.0.26200",
+      "BuildNumber": "26200",
+      "FreePhysicalMemory": 4884888,
+      "TotalVisibleMemorySize": 16370404
+    },
+    "processors": [
+      {
+        "Name": "Intel(R) Core(TM) i7-14650HX",
+        "NumberOfCores": 16,
+        "NumberOfLogicalProcessors": 24,
+        "MaxClockSpeed": 2200
+      }
+    ],
+    "computer": {
+      "Manufacturer": "ASUSTeK COMPUTER INC.",
+      "Model": "ROG Strix G16 G615JMR_G615JMR",
+      "TotalPhysicalMemory": 16763293696,
+      "NumberOfLogicalProcessors": 24
+    },
+    "power_plan": "Power Scheme GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+    "psutil_physical_cores": 16,
+    "psutil_logical_processors": 24,
+    "available_ram_bytes": 5062324224,
+    "controller_affinity_logical_cpu_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "battery": {
+      "percent": 100,
+      "secsleft": -2,
+      "power_plugged": true
+    }
+  },
+  "git_commit": "487ba609ed0d06783837969ac1a52e53866a7ab6",
+  "git_status_at_start": "M .gitignore\n?? benchmark_plots.py\n?? benchmark_windows.py\n?? benchmark_worker.py\n?? requirements-benchmark.txt\n?? tests/test_benchmark_plots.py",
+  "source_sha256": {
+    "benchmark_plots.py": "805a0f005e68d08d8c42b9e3e5101d353bf5c7373c666051f0cce12f188613c1",
+    "benchmark_windows.py": "6e3becb6701e45647c9d59a0971393c9aa99734d2bc2b0bb1326f3b41305eb01",
+    "benchmark_worker.py": "24fe3166c6b52b95c28cd77019aec49dbc37f99e95cdbf92c81bb56046164b4e",
+    "dijkstra_parallel.py": "4ee0967ee5f9f97975ffc885711cc22854e3791da42b864e64a46a9642bc3853",
+    "dijkstra_sequential.py": "537fb2caacb3b6041bf246132846402e6619eead578d9787ff478b7ff02c7871",
+    "graph_utils.py": "a09f49dee01dadf77309478ab3f618833653089e7518d5574b7a8a6cee5c0566",
+    "mpi_smoke.py": "2febd3961476b94d381e814053e97fa41ed74213886646799febef2408f68a01",
+    "tests/__init__.py": "afe99939ce8364dcb0882d33e2dc58a4ab1e9975ed06a4f84e3540098e127936",
+    "tests/mpi_dijkstra_cases.py": "d0646245b64dab79d42f132e27d88e562dfde42c6e0efc661ab16186dc74a899",
+    "tests/test_benchmark_plots.py": "bd22df9d67ef318a69645924d300eca43888bf81fc6ff301d4d27c8792b21ba1",
+    "tests/test_dijkstra_sequential.py": "75ce75ede45b49f6ba8edf5afe6477152e2377b1f77b9fc3120c36cdbf200cc6",
+    "tests/test_graph_utils.py": "e693c531f308b1ba293025fbdce461e405770d0d174eb650b04e099bac2cc180",
+    "tests/test_parallel_cli.py": "0fff7bede514878734a713830c157bf5768ba220e51104da22180425cb92e68d"
+  },
+  "packages": {
+    "contourpy": "1.4.0",
+    "cycler": "0.12.1",
+    "fonttools": "4.67.0",
+    "impi-rt": "2021.18.1",
+    "kiwisolver": "1.5.1",
+    "matplotlib": "3.11.2",
+    "mpi4py": "4.1.2",
+    "numpy": "2.5.4",
+    "packaging": "26.3",
+    "pillow": "13.0.0",
+    "pip": "25.3",
+    "psutil": "7.2.2",
+    "pyparsing": "3.3.3",
+    "python-dateutil": "2.9.0.post0",
+    "six": "1.17.0"
+  },
+  "python_executable": "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Scripts\\python.exe",
+  "python_version": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "mpi_launcher": "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Library\\bin\\mpiexec.exe",
+  "mpi_launcher_sha256": "4e4e3b5f54a6aceef980c87f8dc1f2ce908076fc9692b2b5fb6a0e2eecadb7bd",
+  "requested_process_counts": [
+    1,
+    2,
+    4,
+    8,
+    16
+  ],
+  "controlled_environment": {
+    "I_MPI_PIN": "0",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "BLIS_NUM_THREADS": "1"
+  },
+  "inherited_relevant_environment": {
+    "I_MPI_PIN": null,
+    "OMP_NUM_THREADS": null,
+    "MKL_NUM_THREADS": null,
+    "OPENBLAS_NUM_THREADS": null,
+    "NUMEXPR_NUM_THREADS": null,
+    "VECLIB_MAXIMUM_THREADS": null,
+    "BLIS_NUM_THREADS": null,
+    "I_MPI_PIN_DOMAIN": null,
+    "I_MPI_PIN_ORDER": null,
+    "I_MPI_WAIT_MODE": null,
+    "I_MPI_ASYNC_PROGRESS": null,
+    "I_MPI_FABRICS": null,
+    "I_MPI_DEBUG": null,
+    "OMP_PROC_BIND": null,
+    "OMP_PLACES": null,
+    "KMP_AFFINITY": null,
+    "MSMPI_BIN": null
+  },
+  "effective_relevant_environment": {
+    "I_MPI_PIN": "0",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "BLIS_NUM_THREADS": "1",
+    "I_MPI_PIN_DOMAIN": null,
+    "I_MPI_PIN_ORDER": null,
+    "I_MPI_WAIT_MODE": null,
+    "I_MPI_ASYNC_PROGRESS": null,
+    "I_MPI_FABRICS": null,
+    "I_MPI_DEBUG": null,
+    "OMP_PROC_BIND": null,
+    "OMP_PLACES": null,
+    "KMP_AFFINITY": null,
+    "MSMPI_BIN": null
+  },
+  "affinity_policy": "Intel pinning disabled; Windows schedules workers within recorded inherited CPU affinity; library thread pools limited to one.",
+  "timing_contract": {
+    "clock": "MPI.Wtime",
+    "parallel_statistic": "maximum locally elapsed public-call time, reduced after stop",
+    "includes": [
+      "validation",
+      "packing",
+      "Scatter",
+      "distributed computation and reductions",
+      "gather",
+      "result reconstruction"
+    ],
+    "excludes": [
+      "MPI startup",
+      "input generation/loading",
+      "reference creation/verification",
+      "pre-call Barrier",
+      "elapsed-time reduction",
+      "printing",
+      "disk writes"
+    ],
+    "sequential_baseline": "plain single-process Python child, complete public dijkstra()",
+    "warmups_per_configuration": 1,
+    "warmups_in_statistics": false
+  },
+  "commands": [
+    {
+      "argv": [
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Scripts\\python.exe",
+        ".\\benchmark_windows.py",
+        "pilot",
+        "--output",
+        ".\\results\\windows_2026-10-20_run01",
+        "--sizes",
+        "100",
+        "500",
+        "1000",
+        "2000",
+        "--densities",
+        "0.1",
+        "0.5",
+        "--seed",
+        "42",
+        "--max-weight",
+        "1000",
+        "--processes",
+        "1",
+        "2",
+        "4",
+        "8",
+        "16"
+      ],
+      "powershell": "& 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Scripts\\python.exe' '.\\benchmark_windows.py' 'pilot' '--output' '.\\results\\windows_2026-10-20_run01' '--sizes' '100' '500' '1000' '2000' '--densities' '0.1' '0.5' '--seed' '42' '--max-weight' '1000' '--processes' '1' '2' '4' '8' '16'",
+      "role": "pilot_controller"
+    },
+    {
+      "argv": [
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Library\\bin\\mpiexec.exe",
+        "-n",
+        "1",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Scripts\\python.exe",
+        "-m",
+        "tests.mpi_dijkstra_cases"
+      ],
+      "powershell": "& 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Library\\bin\\mpiexec.exe' '-n' '1' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Scripts\\python.exe' '-m' 'tests.mpi_dijkstra_cases'",
+      "environment_overrides": {
+        "I_MPI_PIN": "0",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1"
+      },
+      "started_utc": "2026-10-21T01:38:26.401576+00:00",
+      "log": "logs/correctness_p1.txt",
+      "completed_utc": "2026-10-21T01:38:26.773829+00:00",
+      "exit_code": 0,
+      "launcher_wall_seconds_not_a_benchmark": 0.36889520002296194
+    },
+    {
+      "argv": [
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Library\\bin\\mpiexec.exe",
+        "-n",
+        "2",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Scripts\\python.exe",
+        "-m",
+        "tests.mpi_dijkstra_cases"
+      ],
+      "powershell": "& 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Library\\bin\\mpiexec.exe' '-n' '2' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Scripts\\python.exe' '-m' 'tests.mpi_dijkstra_cases'",
+      "environment_overrides": {
+        "I_MPI_PIN": "0",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1"
+      },
+      "started_utc": "2026-10-21T01:38:26.774660+00:00",
+      "log": "logs/correctness_p2.txt",
+      "completed_utc": "2026-10-21T01:38:27.133115+00:00",
+      "exit_code": 0,
+      "launcher_wall_seconds_not_a_benchmark": 0.35526950005441904
+    },
+    {
+      "argv": [
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Library\\bin\\mpiexec.exe",
+        "-n",
+        "4",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Scripts\\python.exe",
+        "-m",
+        "tests.mpi_dijkstra_cases"
+      ],
+      "powershell": "& 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Library\\bin\\mpiexec.exe' '-n' '4' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Scripts\\python.exe' '-m' 'tests.mpi_dijkstra_cases'",
+      "environment_overrides": {
+        "I_MPI_PIN": "0",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1"
+      },
+      "started_utc": "2026-10-21T01:38:27.133943+00:00",
+      "log": "logs/correctness_p4.txt",
+      "completed_utc": "2026-10-21T01:38:27.525216+00:00",
+      "exit_code": 0,
+      "launcher_wall_seconds_not_a_benchmark": 0.3877375000156462
+    },
+    {
+      "argv": [
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Library\\bin\\mpiexec.exe",
+        "-n",
+        "8",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Scripts\\python.exe",
+        "-m",
+        "tests.mpi_dijkstra_cases"
+      ],
+      "powershell": "& 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Library\\bin\\mpiexec.exe' '-n' '8' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Scripts\\python.exe' '-m' 'tests.mpi_dijkstra_cases'",
+      "environment_overrides": {
+        "I_MPI_PIN": "0",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1"
+      },
+      "started_utc": "2026-10-21T01:38:27.527644+00:00",
+      "log": "logs/correctness_p8.txt",
+      "completed_utc": "2026-10-21T01:38:28.065455+00:00",
+      "exit_code": 0,
+      "launcher_wall_seconds_not_a_benchmark": 0.5345092000206932
+    },
+    {
+      "argv": [
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Library\\bin\\mpiexec.exe",
+        "-n",
+        "16",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Scripts\\python.exe",
+        "-m",
+        "tests.mpi_dijkstra_cases"
+      ],
+      "powershell": "& 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Library\\bin\\mpiexec.exe' '-n' '16' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Scripts\\python.exe' '-m' 'tests.mpi_dijkstra_cases'",
+      "environment_overrides": {
+        "I_MPI_PIN": "0",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1"
+      },
+      "started_utc": "2026-10-21T01:38:28.066463+00:00",
+      "log": "logs/correctness_p16.txt",
+      "completed_utc": "2026-10-21T01:38:28.885390+00:00",
+      "exit_code": 0,
+      "launcher_wall_seconds_not_a_benchmark": 0.8142713000415824
+    },
+    {
+      "argv": [
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\benchmark_worker.py",
+        "--manifest",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\manifest.json",
+        "--output",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\pilot\\raw_parts\\sequential_p1.csv",
+        "--mode",
+        "sequential",
+        "--phase",
+        "pilot",
+        "--repetitions",
+        "1",
+        "--warmups",
+        "1",
+        "--run-metadata",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\pilot\\sequential_p1.json"
+      ],
+      "powershell": "& 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Scripts\\python.exe' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\benchmark_worker.py' '--manifest' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\manifest.json' '--output' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\pilot\\raw_parts\\sequential_p1.csv' '--mode' 'sequential' '--phase' 'pilot' '--repetitions' '1' '--warmups' '1' '--run-metadata' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\pilot\\sequential_p1.json'",
+      "environment_overrides": {
+        "I_MPI_PIN": "0",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1"
+      },
+      "started_utc": "2026-10-21T01:38:34.805825+00:00",
+      "log": "logs/pilot_sequential_p1.txt",
+      "completed_utc": "2026-10-21T01:38:46.260312+00:00",
+      "exit_code": 0,
+      "launcher_wall_seconds_not_a_benchmark": 11.442253099987283
+    },
+    {
+      "argv": [
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Library\\bin\\mpiexec.exe",
+        "-n",
+        "1",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\benchmark_worker.py",
+        "--manifest",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\manifest.json",
+        "--output",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\pilot\\raw_parts\\parallel_p1.csv",
+        "--mode",
+        "parallel",
+        "--phase",
+        "pilot",
+        "--repetitions",
+        "1",
+        "--warmups",
+        "1",
+        "--run-metadata",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\pilot\\parallel_p1.json"
+      ],
+      "powershell": "& 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Library\\bin\\mpiexec.exe' '-n' '1' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Scripts\\python.exe' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\benchmark_worker.py' '--manifest' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\manifest.json' '--output' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\pilot\\raw_parts\\parallel_p1.csv' '--mode' 'parallel' '--phase' 'pilot' '--repetitions' '1' '--warmups' '1' '--run-metadata' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\pilot\\parallel_p1.json'",
+      "environment_overrides": {
+        "I_MPI_PIN": "0",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1"
+      },
+      "started_utc": "2026-10-21T01:38:46.261400+00:00",
+      "log": "logs/pilot_parallel_p1.txt",
+      "completed_utc": "2026-10-21T01:38:57.878982+00:00",
+      "exit_code": 0,
+      "launcher_wall_seconds_not_a_benchmark": 11.614166299987119
+    },
+    {
+      "argv": [
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Library\\bin\\mpiexec.exe",
+        "-n",
+        "4",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\benchmark_worker.py",
+        "--manifest",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\manifest.json",
+        "--output",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\pilot\\raw_parts\\parallel_p4.csv",
+        "--mode",
+        "parallel",
+        "--phase",
+        "pilot",
+        "--repetitions",
+        "1",
+        "--warmups",
+        "1",
+        "--run-metadata",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\pilot\\parallel_p4.json"
+      ],
+      "powershell": "& 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Library\\bin\\mpiexec.exe' '-n' '4' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Scripts\\python.exe' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\benchmark_worker.py' '--manifest' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\manifest.json' '--output' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\pilot\\raw_parts\\parallel_p4.csv' '--mode' 'parallel' '--phase' 'pilot' '--repetitions' '1' '--warmups' '1' '--run-metadata' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\pilot\\parallel_p4.json'",
+      "environment_overrides": {
+        "I_MPI_PIN": "0",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1"
+      },
+      "started_utc": "2026-10-21T01:38:57.879909+00:00",
+      "log": "logs/pilot_parallel_p4.txt",
+      "completed_utc": "2026-10-21T01:39:02.708905+00:00",
+      "exit_code": 0,
+      "launcher_wall_seconds_not_a_benchmark": 4.823911499988753
+    },
+    {
+      "argv": [
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Library\\bin\\mpiexec.exe",
+        "-n",
+        "16",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\benchmark_worker.py",
+        "--manifest",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\manifest.json",
+        "--output",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\pilot\\raw_parts\\parallel_p16.csv",
+        "--mode",
+        "parallel",
+        "--phase",
+        "pilot",
+        "--repetitions",
+        "1",
+        "--warmups",
+        "1",
+        "--run-metadata",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\pilot\\parallel_p16.json"
+      ],
+      "powershell": "& 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Library\\bin\\mpiexec.exe' '-n' '16' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Scripts\\python.exe' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\benchmark_worker.py' '--manifest' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\manifest.json' '--output' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\pilot\\raw_parts\\parallel_p16.csv' '--mode' 'parallel' '--phase' 'pilot' '--repetitions' '1' '--warmups' '1' '--run-metadata' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\pilot\\parallel_p16.json'",
+      "environment_overrides": {
+        "I_MPI_PIN": "0",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1"
+      },
+      "started_utc": "2026-10-21T01:39:02.709805+00:00",
+      "log": "logs/pilot_parallel_p16.txt",
+      "completed_utc": "2026-10-21T01:39:07.295118+00:00",
+      "exit_code": 0,
+      "launcher_wall_seconds_not_a_benchmark": 4.578751799999736
+    },
+    {
+      "argv": [
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Scripts\\python.exe",
+        ".\\benchmark_windows.py",
+        "run",
+        "--output",
+        ".\\results\\windows_2026-10-20_run01",
+        "--sizes",
+        "100",
+        "500",
+        "1000",
+        "2000",
+        "--repetitions",
+        "5",
+        "--decision",
+        "Pilot supports all four sizes and 16 processes within available RAM and runtime."
+      ],
+      "powershell": "& 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Scripts\\python.exe' '.\\benchmark_windows.py' 'run' '--output' '.\\results\\windows_2026-10-20_run01' '--sizes' '100' '500' '1000' '2000' '--repetitions' '5' '--decision' 'Pilot supports all four sizes and 16 processes within available RAM and runtime.'",
+      "role": "main_controller"
+    },
+    {
+      "argv": [
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\benchmark_worker.py",
+        "--manifest",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\main_manifest.json",
+        "--output",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\raw_parts\\sequential_p1.csv",
+        "--mode",
+        "sequential",
+        "--phase",
+        "main",
+        "--repetitions",
+        "5",
+        "--warmups",
+        "1",
+        "--run-metadata",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\sequential_p1.json"
+      ],
+      "powershell": "& 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Scripts\\python.exe' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\benchmark_worker.py' '--manifest' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\main_manifest.json' '--output' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\raw_parts\\sequential_p1.csv' '--mode' 'sequential' '--phase' 'main' '--repetitions' '5' '--warmups' '1' '--run-metadata' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\sequential_p1.json'",
+      "environment_overrides": {
+        "I_MPI_PIN": "0",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1"
+      },
+      "started_utc": "2026-10-21T01:52:18.636226+00:00",
+      "log": "logs/main_sequential_p1.txt",
+      "completed_utc": "2026-10-21T01:52:52.106304+00:00",
+      "exit_code": 0,
+      "launcher_wall_seconds_not_a_benchmark": 33.462404699996114
+    },
+    {
+      "argv": [
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Library\\bin\\mpiexec.exe",
+        "-n",
+        "1",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\benchmark_worker.py",
+        "--manifest",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\main_manifest.json",
+        "--output",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\raw_parts\\parallel_p1.csv",
+        "--mode",
+        "parallel",
+        "--phase",
+        "main",
+        "--repetitions",
+        "5",
+        "--warmups",
+        "1",
+        "--run-metadata",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\parallel_p1.json"
+      ],
+      "powershell": "& 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Library\\bin\\mpiexec.exe' '-n' '1' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Scripts\\python.exe' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\benchmark_worker.py' '--manifest' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\main_manifest.json' '--output' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\raw_parts\\parallel_p1.csv' '--mode' 'parallel' '--phase' 'main' '--repetitions' '5' '--warmups' '1' '--run-metadata' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\parallel_p1.json'",
+      "environment_overrides": {
+        "I_MPI_PIN": "0",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1"
+      },
+      "started_utc": "2026-10-21T01:52:52.107512+00:00",
+      "log": "logs/main_parallel_p1.txt",
+      "completed_utc": "2026-10-21T01:53:26.189302+00:00",
+      "exit_code": 0,
+      "launcher_wall_seconds_not_a_benchmark": 34.077410399971996
+    },
+    {
+      "argv": [
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Library\\bin\\mpiexec.exe",
+        "-n",
+        "2",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\benchmark_worker.py",
+        "--manifest",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\main_manifest.json",
+        "--output",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\raw_parts\\parallel_p2.csv",
+        "--mode",
+        "parallel",
+        "--phase",
+        "main",
+        "--repetitions",
+        "5",
+        "--warmups",
+        "1",
+        "--run-metadata",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\parallel_p2.json"
+      ],
+      "powershell": "& 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Library\\bin\\mpiexec.exe' '-n' '2' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Scripts\\python.exe' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\benchmark_worker.py' '--manifest' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\main_manifest.json' '--output' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\raw_parts\\parallel_p2.csv' '--mode' 'parallel' '--phase' 'main' '--repetitions' '5' '--warmups' '1' '--run-metadata' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\parallel_p2.json'",
+      "environment_overrides": {
+        "I_MPI_PIN": "0",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1"
+      },
+      "started_utc": "2026-10-21T01:53:26.190300+00:00",
+      "log": "logs/main_parallel_p2.txt",
+      "completed_utc": "2026-10-21T01:53:46.038049+00:00",
+      "exit_code": 0,
+      "launcher_wall_seconds_not_a_benchmark": 19.84264470002381
+    },
+    {
+      "argv": [
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Library\\bin\\mpiexec.exe",
+        "-n",
+        "4",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\benchmark_worker.py",
+        "--manifest",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\main_manifest.json",
+        "--output",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\raw_parts\\parallel_p4.csv",
+        "--mode",
+        "parallel",
+        "--phase",
+        "main",
+        "--repetitions",
+        "5",
+        "--warmups",
+        "1",
+        "--run-metadata",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\parallel_p4.json"
+      ],
+      "powershell": "& 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Library\\bin\\mpiexec.exe' '-n' '4' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Scripts\\python.exe' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\benchmark_worker.py' '--manifest' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\main_manifest.json' '--output' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\raw_parts\\parallel_p4.csv' '--mode' 'parallel' '--phase' 'main' '--repetitions' '5' '--warmups' '1' '--run-metadata' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\parallel_p4.json'",
+      "environment_overrides": {
+        "I_MPI_PIN": "0",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1"
+      },
+      "started_utc": "2026-10-21T01:53:46.039139+00:00",
+      "log": "logs/main_parallel_p4.txt",
+      "completed_utc": "2026-10-21T01:53:58.688846+00:00",
+      "exit_code": 0,
+      "launcher_wall_seconds_not_a_benchmark": 12.64475759997731
+    },
+    {
+      "argv": [
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Library\\bin\\mpiexec.exe",
+        "-n",
+        "8",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\benchmark_worker.py",
+        "--manifest",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\main_manifest.json",
+        "--output",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\raw_parts\\parallel_p8.csv",
+        "--mode",
+        "parallel",
+        "--phase",
+        "main",
+        "--repetitions",
+        "5",
+        "--warmups",
+        "1",
+        "--run-metadata",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\parallel_p8.json"
+      ],
+      "powershell": "& 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Library\\bin\\mpiexec.exe' '-n' '8' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Scripts\\python.exe' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\benchmark_worker.py' '--manifest' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\main_manifest.json' '--output' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\raw_parts\\parallel_p8.csv' '--mode' 'parallel' '--phase' 'main' '--repetitions' '5' '--warmups' '1' '--run-metadata' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\parallel_p8.json'",
+      "environment_overrides": {
+        "I_MPI_PIN": "0",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1"
+      },
+      "started_utc": "2026-10-21T01:53:58.689950+00:00",
+      "log": "logs/main_parallel_p8.txt",
+      "completed_utc": "2026-10-21T01:54:10.988394+00:00",
+      "exit_code": 0,
+      "launcher_wall_seconds_not_a_benchmark": 12.293998699984513
+    },
+    {
+      "argv": [
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Library\\bin\\mpiexec.exe",
+        "-n",
+        "16",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\benchmark_worker.py",
+        "--manifest",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\main_manifest.json",
+        "--output",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\raw_parts\\parallel_p16.csv",
+        "--mode",
+        "parallel",
+        "--phase",
+        "main",
+        "--repetitions",
+        "5",
+        "--warmups",
+        "1",
+        "--run-metadata",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\parallel_p16.json"
+      ],
+      "powershell": "& 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Library\\bin\\mpiexec.exe' '-n' '16' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Scripts\\python.exe' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\benchmark_worker.py' '--manifest' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\main_manifest.json' '--output' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\raw_parts\\parallel_p16.csv' '--mode' 'parallel' '--phase' 'main' '--repetitions' '5' '--warmups' '1' '--run-metadata' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\parallel_p16.json'",
+      "environment_overrides": {
+        "I_MPI_PIN": "0",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1"
+      },
+      "started_utc": "2026-10-21T01:54:10.989499+00:00",
+      "log": "logs/main_parallel_p16.txt",
+      "completed_utc": "2026-10-21T01:54:22.179614+00:00",
+      "exit_code": 0,
+      "launcher_wall_seconds_not_a_benchmark": 11.185876499977894
+    },
+    {
+      "argv": [
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\benchmark_plots.py",
+        "--raw",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\raw.csv",
+        "--summary",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\summary.csv",
+        "--plots-dir",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\plots",
+        "--findings",
+        "C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\findings.md"
+      ],
+      "powershell": "& 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\.venv\\Scripts\\python.exe' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\benchmark_plots.py' '--raw' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\raw.csv' '--summary' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\summary.csv' '--plots-dir' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\plots' '--findings' 'C:\\Users\\NamekianDragon\\repos\\HPC-Assignment-3\\results\\windows_2026-10-20_run01\\findings.md'",
+      "environment_overrides": {
+        "I_MPI_PIN": "0",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1"
+      },
+      "started_utc": "2026-10-21T01:54:22.249098+00:00",
+      "log": "logs/analysis.txt",
+      "completed_utc": "2026-10-21T01:54:26.760055+00:00",
+      "exit_code": 0,
+      "launcher_wall_seconds_not_a_benchmark": 4.505004699982237
+    }
+  ],
+  "preflight": {
+    "1": {
+      "cases": {
+        "invalid": 9,
+        "known": 15,
+        "overflow": 1,
+        "random": 144,
+        "recovery": 10
+      },
+      "per_rank_cases": [
+        {
+          "invalid": 9,
+          "known": 15,
+          "overflow": 1,
+          "random": 144,
+          "recovery": 10
+        }
+      ],
+      "processes": 1,
+      "status": "PASS",
+      "successful_graphs": 169
+    },
+    "2": {
+      "cases": {
+        "invalid": 9,
+        "known": 15,
+        "overflow": 1,
+        "random": 144,
+        "recovery": 10
+      },
+      "per_rank_cases": [
+        {
+          "invalid": 9,
+          "known": 15,
+          "overflow": 1,
+          "random": 144,
+          "recovery": 10
+        },
+        {
+          "invalid": 9,
+          "known": 15,
+          "overflow": 1,
+          "random": 144,
+          "recovery": 10
+        }
+      ],
+      "processes": 2,
+      "status": "PASS",
+      "successful_graphs": 169
+    },
+    "4": {
+      "cases": {
+        "invalid": 9,
+        "known": 15,
+        "overflow": 1,
+        "random": 144,
+        "recovery": 10
+      },
+      "per_rank_cases": [
+        {
+          "invalid": 9,
+          "known": 15,
+          "overflow": 1,
+          "random": 144,
+          "recovery": 10
+        },
+        {
+          "invalid": 9,
+          "known": 15,
+          "overflow": 1,
+          "random": 144,
+          "recovery": 10
+        },
+        {
+          "invalid": 9,
+          "known": 15,
+          "overflow": 1,
+          "random": 144,
+          "recovery": 10
+        },
+        {
+          "invalid": 9,
+          "known": 15,
+          "overflow": 1,
+          "random": 144,
+          "recovery": 10
+        }
+      ],
+      "processes": 4,
+      "status": "PASS",
+      "successful_graphs": 169
+    },
+    "8": {
+      "cases": {
+        "invalid": 9,
+        "known": 15,
+        "overflow": 1,
+        "random": 144,
+        "recovery": 10
+      },
+      "per_rank_cases": [
+        {
+          "invalid": 9,
+          "known": 15,
+          "overflow": 1,
+          "random": 144,
+          "recovery": 10
+        },
+        {
+          "invalid": 9,
+          "known": 15,
+          "overflow": 1,
+          "random": 144,
+          "recovery": 10
+        },
+        {
+          "invalid": 9,
+          "known": 15,
+          "overflow": 1,
+          "random": 144,
+          "recovery": 10
+        },
+        {
+          "invalid": 9,
+          "known": 15,
+          "overflow": 1,
+          "random": 144,
+          "recovery": 10
+        },
+        {
+          "invalid": 9,
+          "known": 15,
+          "overflow": 1,
+          "random": 144,
+          "recovery": 10
+        },
+        {
+          "invalid": 9,
+          "known": 15,
+          "overflow": 1,
+          "random": 144,
+          "recovery": 10
+        },
+        {
+          "invalid": 9,
+          "known": 15,
+          "overflow": 1,
+          "random": 144,
+          "recovery": 10
+        },
+        {
+          "invalid": 9,
+          "known": 15,
+          "overflow": 1,
+          "random": 144,
+          "recovery": 10
+        }
+      ],
+      "processes": 8,
+      "status": "PASS",
+      "successful_graphs": 169
+    },
+    "16": {
+      "cases": {
+        "invalid": 9,
+        "known": 15,
+        "overflow": 1,
+        "random": 144,
+        "recovery": 10
+      },
+      "per_rank_cases": [
+        {
+          "invalid": 9,
+          "known": 15,
+          "overflow": 1,
+          "random": 144,
+          "recovery": 10
+        },
+        {
+          "invalid": 9,
+          "known": 15,
+          "overflow": 1,
+          "random": 144,
+          "recovery": 10
+        },
+        {
+          "invalid": 9,
+          "known": 15,
+          "overflow": 1,
+          "random": 144,
+          "recovery": 10
+        },
+        {
+          "invalid": 9,
+          "known": 15,
+          "overflow": 1,
+          "random": 144,
+          "recovery": 10
+        },
+        {
+          "invalid": 9,
+          "known": 15,
+          "overflow": 1,
+          "random": 144,
+          "recovery": 10
+        },
+        {
+          "invalid": 9,
+          "known": 15,
+          "overflow": 1,
+          "random": 144,
+          "recovery": 10
+        },
+        {
+          "invalid": 9,
+          "known": 15,
+          "overflow": 1,
+          "random": 144,
+          "recovery": 10
+        },
+        {
+          "invalid": 9,
+          "known": 15,
+          "overflow": 1,
+          "random": 144,
+          "recovery": 10
+        },
+        {
+          "invalid": 9,
+          "known": 15,
+          "overflow": 1,
+          "random": 144,
+          "recovery": 10
+        },
+        {
+          "invalid": 9,
+          "known": 15,
+          "overflow": 1,
+          "random": 144,
+          "recovery": 10
+        },
+        {
+          "invalid": 9,
+          "known": 15,
+          "overflow": 1,
+          "random": 144,
+          "recovery": 10
+        },
+        {
+          "invalid": 9,
+          "known": 15,
+          "overflow": 1,
+          "random": 144,
+          "recovery": 10
+        },
+        {
+          "invalid": 9,
+          "known": 15,
+          "overflow": 1,
+          "random": 144,
+          "recovery": 10
+        },
+        {
+          "invalid": 9,
+          "known": 15,
+          "overflow": 1,
+          "random": 144,
+          "recovery": 10
+        },
+        {
+          "invalid": 9,
+          "known": 15,
+          "overflow": 1,
+          "random": 144,
+          "recovery": 10
+        },
+        {
+          "invalid": 9,
+          "known": 15,
+          "overflow": 1,
+          "random": 144,
+          "recovery": 10
+        }
+      ],
+      "processes": 16,
+      "status": "PASS",
+      "successful_graphs": 169
+    }
+  },
+  "pilot": {
+    "sizes": [
+      100,
+      500,
+      1000,
+      2000
+    ],
+    "densities": [
+      0.1,
+      0.5
+    ],
+    "processes": [
+      1,
+      4,
+      16
+    ],
+    "measured_repetitions": 1
+  },
+  "pilot_completed_utc": "2026-10-21T01:39:07.369023+00:00",
+  "pilot_resource_check": {
+    "maximum_public_call_seconds": 2.356274299963843,
+    "maximum_root_rss_bytes": 97677312,
+    "maximum_sum_rank_rss_bytes": 898842624,
+    "maximum_sum_rank_lifetime_peak_bytes_not_simultaneous": 1042898944,
+    "available_ram_bytes_after_pilot": 5020991488,
+    "all_samples_verified": true
+  },
+  "main_started_utc": "2026-10-21T01:52:17.114620+00:00",
+  "final_matrix": {
+    "sizes": [
+      100,
+      500,
+      1000,
+      2000
+    ],
+    "densities": [
+      0.1,
+      0.5
+    ],
+    "processes": [
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "measured_repetitions": 5,
+    "warmups": 1,
+    "selection_reason": "Pilot supports all four sizes and 16 processes within available RAM and runtime."
+  },
+  "main_effective_relevant_environment": {
+    "I_MPI_PIN": "0",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "BLIS_NUM_THREADS": "1",
+    "I_MPI_PIN_DOMAIN": null,
+    "I_MPI_PIN_ORDER": null,
+    "I_MPI_WAIT_MODE": null,
+    "I_MPI_ASYNC_PROGRESS": null,
+    "I_MPI_FABRICS": null,
+    "I_MPI_DEBUG": null,
+    "OMP_PROC_BIND": null,
+    "OMP_PLACES": null,
+    "KMP_AFFINITY": null,
+    "MSMPI_BIN": null
+  },
+  "main_hardware_snapshot": {
+    "operating_system": {
+      "Caption": "Microsoft Windows 11 Home",
+      "Version": "10.0.26200",
+      "BuildNumber": "26200",
+      "FreePhysicalMemory": 5219884,
+      "TotalVisibleMemorySize": 16370404
+    },
+    "processors": [
+      {
+        "Name": "Intel(R) Core(TM) i7-14650HX",
+        "NumberOfCores": 16,
+        "NumberOfLogicalProcessors": 24,
+        "MaxClockSpeed": 2200
+      }
+    ],
+    "computer": {
+      "Manufacturer": "ASUSTeK COMPUTER INC.",
+      "Model": "ROG Strix G16 G615JMR_G615JMR",
+      "TotalPhysicalMemory": 16763293696,
+      "NumberOfLogicalProcessors": 24
+    },
+    "power_plan": "Power Scheme GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+    "psutil_physical_cores": 16,
+    "psutil_logical_processors": 24,
+    "available_ram_bytes": 5411282944,
+    "controller_affinity_logical_cpu_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "battery": {
+      "percent": 100,
+      "secsleft": -2,
+      "power_plugged": true
+    }
+  },
+  "completed_utc": "2026-10-21T01:54:26.766821+00:00",
+  "source_sha256_after": {
+    "benchmark_plots.py": "805a0f005e68d08d8c42b9e3e5101d353bf5c7373c666051f0cce12f188613c1",
+    "benchmark_windows.py": "6e3becb6701e45647c9d59a0971393c9aa99734d2bc2b0bb1326f3b41305eb01",
+    "benchmark_worker.py": "24fe3166c6b52b95c28cd77019aec49dbc37f99e95cdbf92c81bb56046164b4e",
+    "dijkstra_parallel.py": "4ee0967ee5f9f97975ffc885711cc22854e3791da42b864e64a46a9642bc3853",
+    "dijkstra_sequential.py": "537fb2caacb3b6041bf246132846402e6619eead578d9787ff478b7ff02c7871",
+    "graph_utils.py": "a09f49dee01dadf77309478ab3f618833653089e7518d5574b7a8a6cee5c0566",
+    "mpi_smoke.py": "2febd3961476b94d381e814053e97fa41ed74213886646799febef2408f68a01",
+    "tests/__init__.py": "afe99939ce8364dcb0882d33e2dc58a4ab1e9975ed06a4f84e3540098e127936",
+    "tests/mpi_dijkstra_cases.py": "d0646245b64dab79d42f132e27d88e562dfde42c6e0efc661ab16186dc74a899",
+    "tests/test_benchmark_plots.py": "bd22df9d67ef318a69645924d300eca43888bf81fc6ff301d4d27c8792b21ba1",
+    "tests/test_dijkstra_sequential.py": "75ce75ede45b49f6ba8edf5afe6477152e2377b1f77b9fc3120c36cdbf200cc6",
+    "tests/test_graph_utils.py": "e693c531f308b1ba293025fbdce461e405770d0d174eb650b04e099bac2cc180",
+    "tests/test_parallel_cli.py": "0fff7bede514878734a713830c157bf5768ba220e51104da22180425cb92e68d"
+  },
+  "all_original_source_hashes_unchanged": true,
+  "available_ram_bytes_after_main": 5365182464,
+  "artifact_sha256": {
+    "findings.md": "d6568238a1f3bc3812b0a173644b1ef41819fd81953dd7f28f61ea2aa95261fc",
+    "graphs/n1000_d0p1_seed42.npy": "b1c82a43422ceb66b5e6ebf291dfd88fa30c385d21add35436051196bf91ebf5",
+    "graphs/n1000_d0p5_seed42.npy": "d5ba7cf9dccdd8521d69d24c4f297dc80869465c1a2645d28246ed2da5b3f584",
+    "graphs/n100_d0p1_seed42.npy": "fc943240aaba76bb6cb8f61ab742b189ff43fc96df3adaafb8f0764914e99857",
+    "graphs/n100_d0p5_seed42.npy": "9adb5cb8709e158d96d41ea3663d730f2d1bcd3f09a9f4feab546b3b6b8931e9",
+    "graphs/n2000_d0p1_seed42.npy": "e081306dc5cb7a6b74fb93859574b1f39f60bd95b8fabe50c11cd3613bbe8e7e",
+    "graphs/n2000_d0p5_seed42.npy": "8e23abd56808cf881ffa9c62467d4f8c0df4a2bc040db7bd21085b0c5333d23a",
+    "graphs/n500_d0p1_seed42.npy": "7fb42bf238e7991d3c8254080986216ca97ecea17a1c61ffc54f7a0006bdc6ae",
+    "graphs/n500_d0p5_seed42.npy": "002571d4ddf861d987c27e936ea5a12ac4dccba19148d3431bb37d791bc69708",
+    "logs/analysis.txt": "a860f9a74d87437639332e029c0e9b353161cf5715fdccff562f9294da6941f4",
+    "logs/correctness_p1.txt": "e6ef1bca40dd7422b4ceb3f4723039b44f7677f4eedc48415f272e3be340332a",
+    "logs/correctness_p16.txt": "562784e8a1acc8df576c0c8aa216dcce750df811dcf60c3c7ad6438c96dde5a4",
+    "logs/correctness_p2.txt": "a20e2518c06fae73f3b723c59258da97740dbd3e3905e94a6b41a25ada53a0dc",
+    "logs/correctness_p4.txt": "8965d1212f4812ec5b2dfcd32219a2e98e195121135d46bf40a434d87f9c199d",
+    "logs/correctness_p8.txt": "ed8c88fb1e706b51984cadbdf2db53911be5c942313d3c9b86c3277de2a89dce",
+    "logs/main_parallel_p1.txt": "af939ddc6bc76dd9908108436ffed25aea8d5031a4c60e53085774f63878f160",
+    "logs/main_parallel_p16.txt": "fd5b002b8f15e2c6bae6d2a4c968402852d266ad056436ebe9a6337ef00a475e",
+    "logs/main_parallel_p2.txt": "5c928dbf08fca1c6bfe0b4651ac2587458496a69eeb0a592155a3bd72db67f71",
+    "logs/main_parallel_p4.txt": "dca60bfc8055a1d02d87556867b050846b03c79504ebeeab48598cdb9efef7ca",
+    "logs/main_parallel_p8.txt": "da3bf204c9f704a27cb722084a4270705a6be78e7b4bea9577dd4559b94e1b90",
+    "logs/main_sequential_p1.txt": "07afffcd2064256f9622122879036aedbb4ad231aef3c3aed0bd72949e33fecd",
+    "logs/pilot_parallel_p1.txt": "d32fc49a1bca6ed54496990ac8253a54f7c3468166dde36fdc8c0cf8dd693714",
+    "logs/pilot_parallel_p16.txt": "2cf461a5cc343ec0e75d9e46189f637cc004f52d7e3f48637a91a5c594242f99",
+    "logs/pilot_parallel_p4.txt": "ea1b2e8fc13a6f2399a874f6e0adff9628fb2af07496a1821ef1513a1e38379e",
+    "logs/pilot_sequential_p1.txt": "00512f93221efd44ac5bde996b515e79675971aabe6a1762b76cbb92f8fcd548",
+    "main_manifest.json": "fd16b44e638b76fd6f2eae475dae95123f370f2790dc9a7074c7c3e7cee505ea",
+    "manifest.json": "fd16b44e638b76fd6f2eae475dae95123f370f2790dc9a7074c7c3e7cee505ea",
+    "parallel_p1.json": "2c245de34190b9ae204ffcf4180aa7a86a01e898b61d52a6828008bef4a9fb62",
+    "parallel_p16.json": "cae59e653c4c5d69ba0c2775e0db5702d585231f2cd9fb9ffa56a9d7e0e4620b",
+    "parallel_p2.json": "6c1a4f4a1c8114b5a949501c170626786d2de865479bca5f81aec37e2c641bd6",
+    "parallel_p4.json": "f5c6d81c6a3032ec8771ae269bbf0fd149cecfb6aa5ca1122b57aa987110c03e",
+    "parallel_p8.json": "1679c8a7f90b4b7a22858218c46230abc5a7f3d9ec1fb3c5ca8dde2fa2d5eeab",
+    "pilot/parallel_p1.json": "7b855ad6aa3d3bfdb094fedd67c28b1b66c0d39d96b37ba5fa910696f39adba7",
+    "pilot/parallel_p16.json": "7571685eef6b5a3756806798fec6d179090d2ad9d5f2efbd889ff1d5571519aa",
+    "pilot/parallel_p4.json": "15b8544b3255d30a4fc346ecc1143bb18e62696a32da2d2417c1521dfed7dc88",
+    "pilot/raw.csv": "e6ad5e531c5d803878495d68c0743541ce72e07306812f2d94b236b036cbeda1",
+    "pilot/raw_parts/parallel_p1.csv": "27d6a6a04285ef7f30008034bdf7e93d0e3f11bd39043951ac437d7062bbcd2a",
+    "pilot/raw_parts/parallel_p16.csv": "89153c924f4989312b99731b909134fa500c5733e86d41f193a76d71ba3f7f45",
+    "pilot/raw_parts/parallel_p4.csv": "1dcd348b051a5e1719b9009d84b7a19183e0df12b77faec8ccafcabb336bf1c1",
+    "pilot/raw_parts/sequential_p1.csv": "c79e6b0df7b733d6e6b64157e1c241220c6338d62cf958b075258c173cd646b5",
+    "pilot/resource_check.json": "55d3902144a44dcb911e4700572fcdeb2d46b9c228f0ae65ff301a5df0f1407b",
+    "pilot/sequential_p1.json": "9dfe8c4724f4ed92c5741d01967560f3828ec6d334738862f2d954837d78af2f",
+    "plots/density_0p1_execution_time.png": "6097dcf120da648827f5a8254a3220f9f4fc5b420a5fa47dbaee034f9a776c06",
+    "plots/density_0p1_execution_time.svg": "3e2eda8da0eb56650a53d6b7166912b738f6186452f994a20c356f60de7d6279",
+    "plots/density_0p1_speedup.png": "36f669dde6e35879302d77bef75a235757b028c734f2eb85561a23562d26e562",
+    "plots/density_0p1_speedup.svg": "4a23e0a4b48e219b9b2428135ddf70afba6b898e7ee973cd29717d81c2dba80b",
+    "plots/density_0p5_execution_time.png": "05a493c6c50d8850dab7e71b158955fdda7ec4e0b02f6b3d6c90acafef822d8f",
+    "plots/density_0p5_execution_time.svg": "e8669a33cc879128b5ab44281bd7c7fb8041fb6a7c88e8e9d2dd79ab38194bac",
+    "plots/density_0p5_speedup.png": "561c209179a8435a0f49ef04b50d7eadcdbc482079924e2dbb2eee2f63bdf19a",
+    "plots/density_0p5_speedup.svg": "5d45f1e51aac16b79e3433b28d1dbd8b1233dba836842416c4c73e86be8ec28c",
+    "raw.csv": "b4365343f59c56ff7da4b49136ee8e1e6bf2b7b008af76a9572f756f066a1cbf",
+    "raw_parts/parallel_p1.csv": "142ddd3dc4fc4d5da84f648c134fbcb34faace4a8968e613df04caf307f617a3",
+    "raw_parts/parallel_p16.csv": "43735deeeae09f4ea709b92666a13b4f15c4009b12537fe26e8f88aea51b8fb8",
+    "raw_parts/parallel_p2.csv": "ca881cc2de43d272d1efe8fe4d3974e023c20cc5ee4ca1111e736b9924d4ca41",
+    "raw_parts/parallel_p4.csv": "69b6994b537709d0ae00ed0d999416c9b0c268227391647a27f1d5dae47383cd",
+    "raw_parts/parallel_p8.csv": "ed9a38e1767ddad2456658a742d35429e91a8cad7b4769e45c87d0c0b1e8f6e8",
+    "raw_parts/sequential_p1.csv": "ad6dd762bc67b0f000461698c71b0e782ec225c79e53a7839427b6b95c41381a",
+    "references/n1000_d0p1_seed42.npy": "dbac01b2625cf7039c65041bb2f02cc71b933281c75704d2b64da298a64e390a",
+    "references/n1000_d0p5_seed42.npy": "65272de06f89c6e67bde733182697086098d2e3128374c7fd7bab967126720bb",
+    "references/n100_d0p1_seed42.npy": "ca973745fcc34f71371872233496557a6e665a73f45e10f5f870fee0d2fbb399",
+    "references/n100_d0p5_seed42.npy": "92b01cf60185f279e5fd6552ed2b96ac05f416cfff4cba02e8d2c1ede1f75aa4",
+    "references/n2000_d0p1_seed42.npy": "a88440b6c79bee4c71f8e770665722a25e65962a94e2023d044f659fd11f2257",
+    "references/n2000_d0p5_seed42.npy": "bf761071e58c782b8d1bde04e468e3fc00cbd72edf61d246e817bcbd24ab08e3",
+    "references/n500_d0p1_seed42.npy": "dc4d6f9983d6be1ad468b5d6710f6e119045b658f66a743c37ff11d72a405ab4",
+    "references/n500_d0p5_seed42.npy": "70c382b55b46c590642fee1a6cd702bb9ef3bb54fe4f5765c323c31ee0c4862c",
+    "sequential_p1.json": "95006ab2df2561a5c596e70ce931e46716ac31c4fa5fdc24ee7043a7cf3e0465",
+    "sources/benchmark_plots.py": "805a0f005e68d08d8c42b9e3e5101d353bf5c7373c666051f0cce12f188613c1",
+    "sources/benchmark_windows.py": "6e3becb6701e45647c9d59a0971393c9aa99734d2bc2b0bb1326f3b41305eb01",
+    "sources/benchmark_worker.py": "24fe3166c6b52b95c28cd77019aec49dbc37f99e95cdbf92c81bb56046164b4e",
+    "sources/dijkstra_parallel.py": "4ee0967ee5f9f97975ffc885711cc22854e3791da42b864e64a46a9642bc3853",
+    "sources/dijkstra_sequential.py": "537fb2caacb3b6041bf246132846402e6619eead578d9787ff478b7ff02c7871",
+    "sources/graph_utils.py": "a09f49dee01dadf77309478ab3f618833653089e7518d5574b7a8a6cee5c0566",
+    "sources/mpi_smoke.py": "2febd3961476b94d381e814053e97fa41ed74213886646799febef2408f68a01",
+    "sources/tests/__init__.py": "afe99939ce8364dcb0882d33e2dc58a4ab1e9975ed06a4f84e3540098e127936",
+    "sources/tests/mpi_dijkstra_cases.py": "d0646245b64dab79d42f132e27d88e562dfde42c6e0efc661ab16186dc74a899",
+    "sources/tests/test_benchmark_plots.py": "bd22df9d67ef318a69645924d300eca43888bf81fc6ff301d4d27c8792b21ba1",
+    "sources/tests/test_dijkstra_sequential.py": "75ce75ede45b49f6ba8edf5afe6477152e2377b1f77b9fc3120c36cdbf200cc6",
+    "sources/tests/test_graph_utils.py": "e693c531f308b1ba293025fbdce461e405770d0d174eb650b04e099bac2cc180",
+    "sources/tests/test_parallel_cli.py": "0fff7bede514878734a713830c157bf5768ba220e51104da22180425cb92e68d",
+    "summary.csv": "81f5d434ad0e9bd24f646639dc3ef4f40be7592d4d22d1e5b1fa0fbd602785ac"
+  },
+  "final_validation": {
+    "main_rows": 288,
+    "measured_main_rows": 240,
+    "discarded_main_warmups": 48,
+    "pilot_rows_kept_separate": 64,
+    "summary_configurations": 48,
+    "all_samples_verified": true,
+    "all_elapsed_times_equal_max_of_rank_times": true,
+    "all_recorded_artifact_hashes_match": true,
+    "all_source_snapshots_match": true,
+    "regression_tests": {
+      "discovered": 51,
+      "passed": 45,
+      "opt_in_cli_skipped": 6
+    },
+    "setup_commands_executed": [
+      ".\\.venv\\Scripts\\python.exe -m pip install matplotlib psutil",
+      ".\\.venv\\Scripts\\python.exe -m pip check",
+      ".\\.venv\\Scripts\\python.exe -m unittest discover -s tests -v"
+    ]
+  }
+}

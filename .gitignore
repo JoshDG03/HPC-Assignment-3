@@ -222,3 +222,6 @@ __marimo__/
 # Locally generated graphs and MPI crash dumps
 /generated/
 *.dmp
+
+# Reproducible benchmark matrices remain local; manifests and measured results are tracked.
+/results/**/graphs/

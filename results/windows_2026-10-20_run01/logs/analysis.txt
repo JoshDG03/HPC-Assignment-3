@@ -1,0 +1,1 @@
+Wrote 48 summary rows to C:\Users\NamekianDragon\repos\HPC-Assignment-3\results\windows_2026-10-20_run01\summary.csv and 8 plot files.
